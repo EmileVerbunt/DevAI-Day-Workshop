@@ -2,7 +2,7 @@
 
 Master AI-powered coding with GitHub Copilot through hands-on exercises and real-world examples.
 
-**🚀 [Start the Workshop](https://customer-workshops.github.io/DevAI-Day-Workshop/)**
+**🚀 [Start the Workshop](https://emileverbunt.github.io/DevAI-Day-Workshop/)**
 
 ## Overview
 
@@ -68,7 +68,7 @@ Go beyond the IDE and explore the broader Copilot ecosystem — CLI, SDK, agent 
 
 ### Option 1: Access Online
 
-Visit the workshop at **[https://customer-workshops.github.io/DevAI-Day-Workshop/](https://customer-workshops.github.io/DevAI-Day-Workshop/)** - no installation required!
+Visit the workshop at **[https://emileverbunt.github.io/DevAI-Day-Workshop/](https://emileverbunt.github.io/DevAI-Day-Workshop/)** - no installation required!
 
 ### Option 2: Local Development
 

@@ -4,7 +4,7 @@ This PR enables GitHub Pages for the DevAI-Day-Workshop repository. After mergin
 
 ## 1. Enable GitHub Pages in Repository Settings
 
-1. Go to the repository settings: `https://github.com/Customer-Workshops/DevAI-Day-Workshop/settings/pages`
+1. Go to the repository settings: `https://github.com/EmileVerbunt/DevAI-Day-Workshop/settings/pages`
 2. Under "Build and deployment":
    - **Source**: Select "GitHub Actions"
 3. Save the settings
@@ -16,14 +16,14 @@ The deployment workflow will automatically run when:
 - Or manually triggered via the Actions tab
 
 To manually trigger:
-1. Go to Actions tab: `https://github.com/Customer-Workshops/DevAI-Day-Workshop/actions`
+1. Go to Actions tab: `https://github.com/EmileVerbunt/DevAI-Day-Workshop/actions`
 2. Select "Deploy to GitHub Pages" workflow
 3. Click "Run workflow" → "Run workflow"
 
 ## 3. Access the Workshop
 
 Once deployed, the workshop will be accessible at:
-**https://customer-workshops.github.io/DevAI-Day-Workshop/**
+**https://emileverbunt.github.io/DevAI-Day-Workshop/**
 
 ## What This PR Includes
 
@@ -43,9 +43,9 @@ Once deployed, the workshop will be accessible at:
 ## Verification
 
 After deployment, verify:
-- [ ] Main page loads: `https://customer-workshops.github.io/DevAI-Day-Workshop/`
-- [ ] Path 1 loads: `https://customer-workshops.github.io/DevAI-Day-Workshop/devai-day-workshop/start-coding.html`
-- [ ] Path 2 loads: `https://customer-workshops.github.io/DevAI-Day-Workshop/devai-day-workshop/pro-features.html`
+- [ ] Main page loads: `https://emileverbunt.github.io/DevAI-Day-Workshop/`
+- [ ] Path 1 loads: `https://emileverbunt.github.io/DevAI-Day-Workshop/devai-day-workshop/start-coding.html`
+- [ ] Path 2 loads: `https://emileverbunt.github.io/DevAI-Day-Workshop/devai-day-workshop/pro-features.html`
 - [ ] All CSS/JS assets load correctly
 - [ ] All images display correctly
 - [ ] Navigation between pages works
