@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-11-14T15:51:46+07:00",
+  "id": "devai-day-workshop-id",
+  "duration": 160,
+  "title": "DevAI Day Workshop",
+  "summary": "DevAI Day Workshop for Github Universe Recap 2025 Jakarta Indonesia",
+  "source": "workshop.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "ai",
+    "development"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://example.com/feedback",
+  "url": "devai-day-workshop-id"
+}
