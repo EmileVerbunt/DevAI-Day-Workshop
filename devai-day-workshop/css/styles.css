@@ -296,6 +296,51 @@ pre code {
   height: 18px;
 }
 
+/* Language switcher */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0 var(--spacing-sm);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.lang-switcher:hover {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+}
+
+.lang-switcher .lang-switcher-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.lang-switcher .lang-select {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-sm) 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.lang-switcher .lang-select:focus-visible {
+  outline: 2px solid var(--color-wonderland-purple);
+  outline-offset: 2px;
+}
+
+.lang-switcher .lang-select option {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+}
+
 /* Landing page hero - Wonderland Theme */
 .hero {
   background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
@@ -1073,6 +1118,29 @@ th {
 
 tr:hover {
   background-color: var(--color-bg-secondary);
+}
+
+/* Use-case cards (Path 5 "choose your own") */
+.use-case-grid > h3 {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.use-case-grid > h3:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: var(--spacing-md);
+}
+
+/* Comparison table wrapper (Path 3 Fleet) */
+.comparison-table {
+  margin: var(--spacing-lg) 0;
+  overflow-x: auto;
+}
+
+.comparison-table table {
+  margin: 0;
 }
 
 /* Footer */

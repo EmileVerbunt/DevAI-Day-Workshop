@@ -1,217 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html data-i18n-title="agentic-workflows.meta.title" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Build AI-powered automation with GitHub Agentic Workflows (gh-aw) — natural language markdown workflows compiled into hardened GitHub Actions.">
-  <meta name="theme-color" content="#6C21D9">
-  <title>Agentic Workflows - DevAI Day Workshop</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Build AI-powered automation with GitHub Agentic Workflows (gh-aw) — natural language markdown workflows compiled into hardened GitHub Actions." data-i18n-attr="content:agentic-workflows.meta.description" name="description"/>
+<meta content="#6C21D9" name="theme-color"/>
+<title>Agentic Workflows - DevAI Day Workshop</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
     body { font-family: 'Inter', var(--font-family); }
   </style>
 </head>
-<body>
-  <!-- Header -->
-  <header class="site-header" role="banner">
-    <div class="header-brand">
-      <svg class="header-logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-      </svg>
-      <a href="../index.html" class="header-title">DevAI Day Workshop</a>
-    </div>
-    <nav class="header-nav" aria-label="Main navigation">
-      <a href="../index.html" class="header-nav-link">Home</a>
-      <a href="start-coding.html" class="header-nav-link">Start Coding with AI</a>
-      <a href="pro-features.html" class="header-nav-link">Copilot Pro Features</a>
-      <a href="extended-capabilities.html" class="header-nav-link">Extended Capabilities</a>
-      <a href="spec-driven-development.html" class="header-nav-link">Spec-Driven Development</a>
-      <a href="agentic-workflows.html" class="header-nav-link active">Agentic Workflows</a>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-        <svg class="theme-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="theme-toggle-text">Dark</span>
-      </button>
-    </nav>
-  </header>
-
-  <!-- Workshop Layout -->
-  <div class="workshop-layout">
-    <!-- Sidebar Navigation -->
-    <aside id="workshop-sidebar" class="workshop-sidebar" role="navigation" aria-label="Workshop steps">
-      <div class="sidebar-header">
-        <a href="../index.html" class="sidebar-back">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <line x1="19" y1="12" x2="5" y2="12"/>
-            <polyline points="12 19 5 12 12 5"/>
-          </svg>
-          Back to Home
-        </a>
-        <h2 class="sidebar-title">Agentic Workflows</h2>
-      </div>
-
-      <nav class="sidebar-nav">
-        <ol class="sidebar-nav-list">
-          <li class="sidebar-nav-item">
-            <a href="#step-1" class="sidebar-nav-link active">
-              <span class="sidebar-nav-number">1</span>
-              <span class="sidebar-nav-text">What are Agentic Workflows?</span>
-            </a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a href="#step-2" class="sidebar-nav-link">
-              <span class="sidebar-nav-number">2</span>
-              <span class="sidebar-nav-text">Installing gh-aw &amp; Workflow Anatomy</span>
-            </a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a href="#step-3" class="sidebar-nav-link">
-              <span class="sidebar-nav-number">3</span>
-              <span class="sidebar-nav-text">Triggers, Permissions &amp; Safe-Outputs</span>
-            </a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a href="#step-4" class="sidebar-nav-link">
-              <span class="sidebar-nav-number">4</span>
-              <span class="sidebar-nav-text">Compiling &amp; Running</span>
-            </a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a href="#step-5" class="sidebar-nav-link">
-              <span class="sidebar-nav-number">5</span>
-              <span class="sidebar-nav-text">Hands-on: Issue-Triage Agent</span>
-            </a>
-          </li>
-        </ol>
-      </nav>
-
-      <div class="progress-container">
-        <div class="progress-label">
-          <span>Progress</span>
-          <span><span class="progress-current">1</span> / <span class="progress-total">5</span></span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 20%;"></div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Sidebar overlay for mobile -->
-    <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
-
-    <!-- Main Content -->
-    <main class="workshop-content" role="main">
-      <div class="workshop-content-inner">
-
-        <!-- Step 1: What are Agentic Workflows? -->
-        <section id="step-1" class="step-section active" aria-labelledby="step-1-title">
-          <header class="step-header">
-            <span class="step-number">Step 1 of 5</span>
-            <h1 id="step-1-title" class="step-title">What are Agentic Workflows?</h1>
-            <p class="step-duration">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              15 minutes
-            </p>
-          </header>
-
-          <p><a href="https://github.github.com/gh-aw/" target="_blank" rel="noopener noreferrer">GitHub Agentic Workflows</a> (<code>gh-aw</code>) are AI-powered automation that can understand context, make decisions, and take meaningful actions — all from natural-language instructions you write in markdown. Instead of brittle scripts, you describe <em>what</em> you want to happen and let a coding agent figure out <em>how</em>.</p>
-
-          <h2>Agentic vs. Traditional Automation</h2>
-          <p>Traditional CI automation follows fixed if-then rules. Agentic workflows use coding agents (like Copilot CLI, Claude, or Codex) that go further:</p>
-          <ul>
-            <li><strong>Understand context</strong> — Read your repository, issues, and pull requests to grasp the current situation.</li>
-            <li><strong>Make decisions</strong> — Choose appropriate actions based on context, not just predefined conditions.</li>
-            <li><strong>Adapt behavior</strong> — Respond flexibly to scenarios you didn't explicitly program for.</li>
-          </ul>
-
-          <div class="info-box note">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="12" y1="16" x2="12" y2="12"/>
-              <line x1="12" y1="8" x2="12.01" y2="8"/>
-            </svg>
-            <div class="info-box-content">
-              <strong>The key idea</strong>
-              <p>A traditional workflow is code that runs. An agentic workflow is <em>natural language</em> that an AI agent runs — compiled into a hardened GitHub Actions workflow so it executes safely and repeatably.</p>
-            </div>
-          </div>
-
-          <h2>How It Works at a Glance</h2>
-          <p>An agentic workflow is a single markdown file with two parts:</p>
-          <ul>
-            <li><strong>Frontmatter</strong> — A YAML block at the top that configures <em>when</em> the workflow runs and <em>what</em> it is allowed to do (triggers, permissions, safe-outputs).</li>
-            <li><strong>Markdown body</strong> — Your natural-language instructions describing the task.</li>
-          </ul>
-          <p>The <code>gh aw compile</code> command converts this markdown into a hardened <code>.lock.yml</code> GitHub Actions workflow that runs an AI agent in a containerized environment whenever the trigger fires.</p>
-
-          <h2>What You Can Automate</h2>
-          <ul>
-            <li><strong>Issue triage</strong> — Read new issues, ask clarifying questions, apply labels.</li>
-            <li><strong>Code review</strong> — Summarize PRs and flag risky changes.</li>
-            <li><strong>Release management</strong> — Draft release notes from merged PRs.</li>
-            <li><strong>Maintenance</strong> — Keep docs, changelogs, and dependencies tidy.</li>
-          </ul>
-          <p>Many ready-made examples live in the <a href="https://github.com/githubnext/agentics" target="_blank" rel="noopener noreferrer">Agentics collection</a>.</p>
-
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" disabled aria-label="Previous step">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="19" y1="12" x2="5" y2="12"/>
-                <polyline points="12 19 5 12 12 5"/>
-              </svg>
-              Previous
-            </button>
-            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
-              Next
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </button>
-          </nav>
-        </section>
-
-        <!-- Step 2: Installing gh-aw & Workflow Anatomy -->
-        <section id="step-2" class="step-section" aria-labelledby="step-2-title">
-          <header class="step-header">
-            <span class="step-number">Step 2 of 5</span>
-            <h1 id="step-2-title" class="step-title">Installing gh-aw &amp; Workflow Anatomy</h1>
-            <p class="step-duration">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              20 minutes
-            </p>
-          </header>
-
-          <p>The <code>gh aw</code> CLI extension lets you create, compile, and run agentic workflows directly from your terminal.</p>
-
-          <div class="info-box warning">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
-              <line x1="12" y1="9" x2="12" y2="13"/>
-              <line x1="12" y1="17" x2="12.01" y2="17"/>
-            </svg>
-            <div class="info-box-content">
-              <strong>Prerequisites</strong>
-              <ul>
-                <li><strong>GitHub CLI (<code>gh</code>)</strong> installed and authenticated — <a href="https://cli.github.com/" target="_blank" rel="noopener noreferrer">cli.github.com</a></li>
-                <li><strong>A repository with GitHub Actions enabled</strong> and permission to add workflows</li>
-                <li><strong>A coding agent / model</strong> available to your repo (e.g., GitHub Copilot)</li>
-              </ul>
-            </div>
-          </div>
-
-          <h2>Install the Extension</h2>
-          <pre><code># Install the gh-aw CLI extension
+<body data-i18n-page="agentic-workflows">
+<!-- Header -->
+<header class="site-header" role="banner">
+<div class="header-brand">
+<svg aria-hidden="true" class="header-logo" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+</svg>
+<a class="header-title" href="../index.html">DevAI Day Workshop</a>
+</div>
+<nav aria-label="Main navigation" class="header-nav" data-i18n-attr="aria-label:common.nav.ariaMain">
+<a class="header-nav-link" data-i18n="common.nav.home" href="../index.html">Home</a>
+<a class="header-nav-link" data-i18n="common.nav.startCoding" href="start-coding.html">Start Coding with AI</a>
+<a class="header-nav-link" data-i18n="common.nav.proFeatures" href="pro-features.html">Copilot Pro Features</a>
+<a class="header-nav-link" data-i18n="common.nav.extendedCapabilities" href="extended-capabilities.html">Extended Capabilities</a>
+<a class="header-nav-link" data-i18n="common.nav.specDriven" href="spec-driven-development.html">Spec-Driven Development</a>
+<a class="header-nav-link active" data-i18n="common.nav.agenticWorkflows" href="agentic-workflows.html">Agentic Workflows</a>
+<button aria-label="Toggle dark mode" class="theme-toggle" data-i18n-attr="aria-label:common.theme.toggleAria" id="theme-toggle">
+<svg aria-hidden="true" class="theme-toggle-icon" fill="none" height="18" viewBox="0 0 24 24" width="18">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="theme-toggle-text">Dark</span>
+</button><div class="lang-switcher" data-lang-switcher>
+<svg aria-hidden="true" class="lang-switcher-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<line x1="2" x2="22" y1="12" y2="12"></line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+</svg>
+<select aria-label="Select language" class="lang-select" data-i18n-attr="aria-label:common.lang.selectAria">
+<option value="en">EN</option>
+<option value="nl">NL</option>
+</select>
+</div>
+</nav>
+</header>
+<!-- Workshop Layout -->
+<div class="workshop-layout">
+<!-- Sidebar Navigation -->
+<aside aria-label="Workshop steps" class="workshop-sidebar" data-i18n-attr="aria-label:common.sidebar.stepsAria" id="workshop-sidebar" role="navigation">
+<div class="sidebar-header">
+<a class="sidebar-back" href="../index.html">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16">
+<line x1="19" x2="5" y1="12" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg><span data-i18n="agentic-workflows.sidebar.backHome">Back to Home</span></a>
+<h2 class="sidebar-title" data-i18n="agentic-workflows.sidebar.title">Agentic Workflows</h2>
+</div>
+<nav class="sidebar-nav">
+<ol class="sidebar-nav-list">
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link active" href="#step-1">
+<span class="sidebar-nav-number">1</span>
+<span class="sidebar-nav-text" data-i18n="agentic-workflows.sidebar.step1">What are Agentic Workflows?</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="#step-2">
+<span class="sidebar-nav-number">2</span>
+<span class="sidebar-nav-text" data-i18n="agentic-workflows.sidebar.step2">Installing gh-aw &amp; Workflow Anatomy</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="#step-3">
+<span class="sidebar-nav-number">3</span>
+<span class="sidebar-nav-text" data-i18n="agentic-workflows.sidebar.step3">Triggers, Permissions &amp; Safe-Outputs</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="#step-4">
+<span class="sidebar-nav-number">4</span>
+<span class="sidebar-nav-text" data-i18n="agentic-workflows.sidebar.step4">Compiling &amp; Running</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="#step-5">
+<span class="sidebar-nav-number">5</span>
+<span class="sidebar-nav-text" data-i18n="agentic-workflows.sidebar.step5">Hands-on: Issue-Triage Agent</span>
+</a>
+</li>
+</ol>
+</nav>
+<div class="progress-container">
+<div class="progress-label">
+<span data-i18n="agentic-workflows.progress.label">Progress</span>
+<span><span class="progress-current">1</span> / <span class="progress-total">5</span></span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 20%;"></div>
+</div>
+</div>
+</aside>
+<!-- Sidebar overlay for mobile -->
+<div aria-hidden="true" class="sidebar-overlay" id="sidebar-overlay"></div>
+<!-- Main Content -->
+<main class="workshop-content" role="main">
+<div class="workshop-content-inner">
+<!-- Step 1: What are Agentic Workflows? -->
+<section aria-labelledby="step-1-title" class="step-section active" id="step-1">
+<header class="step-header">
+<span class="step-number" data-i18n="agentic-workflows.step1.number">Step 1 of 5</span>
+<h1 class="step-title" data-i18n="agentic-workflows.step1.title" id="step-1-title">What are Agentic Workflows?</h1>
+<p class="step-duration">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg><span data-i18n="agentic-workflows.step1.duration">15 minutes</span></p>
+</header>
+<p data-i18n-html="agentic-workflows.step1.intro"><a href="https://github.github.com/gh-aw/" rel="noopener noreferrer" target="_blank">GitHub Agentic Workflows</a> (<code>gh-aw</code>) are AI-powered automation that can understand context, make decisions, and take meaningful actions — all from natural-language instructions you write in markdown. Instead of brittle scripts, you describe <em>what</em> you want to happen and let a coding agent figure out <em>how</em>.</p>
+<h2 data-i18n="agentic-workflows.step1.comparisonTitle">Agentic vs. Traditional Automation</h2>
+<p data-i18n="agentic-workflows.step1.comparisonP1">Traditional CI automation follows fixed if-then rules. Agentic workflows use coding agents (like Copilot CLI, Claude, or Codex) that go further:</p>
+<ul>
+<li data-i18n-html="agentic-workflows.step1.comparisonLi1"><strong>Understand context</strong> — Read your repository, issues, and pull requests to grasp the current situation.</li>
+<li data-i18n-html="agentic-workflows.step1.comparisonLi2"><strong>Make decisions</strong> — Choose appropriate actions based on context, not just predefined conditions.</li>
+<li data-i18n-html="agentic-workflows.step1.comparisonLi3"><strong>Adapt behavior</strong> — Respond flexibly to scenarios you didn't explicitly program for.</li>
+</ul>
+<div class="info-box note">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<line x1="12" x2="12" y1="16" y2="12"></line>
+<line x1="12" x2="12.01" y1="8" y2="8"></line>
+</svg>
+<div class="info-box-content">
+<strong data-i18n="agentic-workflows.step1.keyIdeaTitle">The key idea</strong>
+<p data-i18n-html="agentic-workflows.step1.keyIdeaP1">A traditional workflow is code that runs. An agentic workflow is <em>natural language</em> that an AI agent runs — compiled into a hardened GitHub Actions workflow so it executes safely and repeatably.</p>
+</div>
+</div>
+<h2 data-i18n="agentic-workflows.step1.glanceTitle">How It Works at a Glance</h2>
+<p data-i18n="agentic-workflows.step1.glanceP1">An agentic workflow is a single markdown file with two parts:</p>
+<ul>
+<li data-i18n-html="agentic-workflows.step1.glanceLi1"><strong>Frontmatter</strong> — A YAML block at the top that configures <em>when</em> the workflow runs and <em>what</em> it is allowed to do (triggers, permissions, safe-outputs).</li>
+<li data-i18n-html="agentic-workflows.step1.glanceLi2"><strong>Markdown body</strong> — Your natural-language instructions describing the task.</li>
+</ul>
+<p data-i18n-html="agentic-workflows.step1.glanceP2">The <code>gh aw compile</code> command converts this markdown into a hardened <code>.lock.yml</code> GitHub Actions workflow that runs an AI agent in a containerized environment whenever the trigger fires.</p>
+<h2 data-i18n="agentic-workflows.step1.automateTitle">What You Can Automate</h2>
+<ul>
+<li data-i18n-html="agentic-workflows.step1.automateLi1"><strong>Issue triage</strong> — Read new issues, ask clarifying questions, apply labels.</li>
+<li data-i18n-html="agentic-workflows.step1.automateLi2"><strong>Code review</strong> — Summarize PRs and flag risky changes.</li>
+<li data-i18n-html="agentic-workflows.step1.automateLi3"><strong>Release management</strong> — Draft release notes from merged PRs.</li>
+<li data-i18n-html="agentic-workflows.step1.automateLi4"><strong>Maintenance</strong> — Keep docs, changelogs, and dependencies tidy.</li>
+</ul>
+<p data-i18n-html="agentic-workflows.step1.automateP1">Many ready-made examples live in the <a href="https://github.com/githubnext/agentics" rel="noopener noreferrer" target="_blank">Agentics collection</a>.</p>
+<nav aria-label="Step navigation" class="step-navigation" data-i18n-attr="aria-label:agentic-workflows.stepNav.aria">
+<button aria-label="Previous step" class="step-nav-button step-nav-prev" data-i18n-attr="aria-label:common.stepNav.previousAria" disabled="">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<line x1="19" x2="5" y1="12" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg><span data-i18n="common.stepNav.previous">Previous</span></button>
+<button aria-label="Next step" class="step-nav-button primary step-nav-next" data-i18n-attr="aria-label:common.stepNav.nextAria"><span data-i18n="common.stepNav.next">Next</span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</button>
+</nav>
+</section>
+<!-- Step 2: Installing gh-aw & Workflow Anatomy -->
+<section aria-labelledby="step-2-title" class="step-section" id="step-2">
+<header class="step-header">
+<span class="step-number" data-i18n="agentic-workflows.step2.number">Step 2 of 5</span>
+<h1 class="step-title" data-i18n="agentic-workflows.step2.title" id="step-2-title">Installing gh-aw &amp; Workflow Anatomy</h1>
+<p class="step-duration">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg><span data-i18n="agentic-workflows.step2.duration">20 minutes</span></p>
+</header>
+<p data-i18n-html="agentic-workflows.step2.intro">The <code>gh aw</code> CLI extension lets you create, compile, and run agentic workflows directly from your terminal.</p>
+<div class="info-box warning">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path>
+<line x1="12" x2="12" y1="9" y2="13"></line>
+<line x1="12" x2="12.01" y1="17" y2="17"></line>
+</svg>
+<div class="info-box-content">
+<strong data-i18n="agentic-workflows.step2.prerequisitesTitle">Prerequisites</strong>
+<ul>
+<li data-i18n-html="agentic-workflows.step2.prereqLi1"><strong>GitHub CLI (<code>gh</code>)</strong> installed and authenticated — <a href="https://cli.github.com/" rel="noopener noreferrer" target="_blank">cli.github.com</a></li>
+<li data-i18n-html="agentic-workflows.step2.prereqLi2"><strong>A repository with GitHub Actions enabled</strong> and permission to add workflows</li>
+<li data-i18n-html="agentic-workflows.step2.prereqLi3"><strong>A coding agent / model</strong> available to your repo (e.g., GitHub Copilot)</li>
+</ul>
+</div>
+</div>
+<h2 data-i18n="agentic-workflows.step2.installTitle">Install the Extension</h2>
+<pre><code># Install the gh-aw CLI extension
 gh extension install github/gh-aw
 
 # Verify the installation
@@ -219,15 +204,13 @@ gh aw version
 
 # (Optional) pin a version for team consistency
 gh extension install github/gh-aw@v0.1.0</code></pre>
-
-          <h2>Initialize a Repository</h2>
-          <p><code>gh aw init</code> prepares the repository for agentic workflows — it configures <code>.gitattributes</code> and scaffolds supporting skill/agent files.</p>
-          <pre><code># Prepare the repo (non-interactive defaults)
+<h2 data-i18n="agentic-workflows.step2.initTitle">Initialize a Repository</h2>
+<p data-i18n-html="agentic-workflows.step2.initP1"><code>gh aw init</code> prepares the repository for agentic workflows — it configures <code>.gitattributes</code> and scaffolds supporting skill/agent files.</p>
+<pre><code># Prepare the repo (non-interactive defaults)
 gh aw init</code></pre>
-
-          <h2>Anatomy of a Workflow File</h2>
-          <p>Workflows live as markdown files under <code>.github/workflows/</code>. Here is a minimal example:</p>
-          <pre><code>---
+<h2 data-i18n="agentic-workflows.step2.anatomyTitle">Anatomy of a Workflow File</h2>
+<p data-i18n-html="agentic-workflows.step2.anatomyP1">Workflows live as markdown files under <code>.github/workflows/</code>. Here is a minimal example:</p>
+<pre><code>---
 on:
   issues:
     types: [opened]
@@ -241,216 +224,203 @@ safe-outputs:
 Analyze the current issue. If it is unclear or missing key
 details (steps to reproduce, expected vs. actual behavior),
 post a friendly comment asking for the missing information.</code></pre>
-          <p>The YAML <strong>frontmatter</strong> (between the <code>---</code> markers) controls execution; the <strong>markdown body</strong> is the agent's task in plain language.</p>
-
-          <div class="info-box note">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="12" y1="16" x2="12" y2="12"/>
-              <line x1="12" y1="8" x2="12.01" y2="8"/>
-            </svg>
-            <div class="info-box-content">
-              <strong>Tip</strong>
-              <p>You can start from a curated example instead of a blank file with <code>gh aw add</code>, which pulls in a workflow from the Agentics collection and generates its compiled YAML.</p>
-            </div>
-          </div>
-
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="19" y1="12" x2="5" y2="12"/>
-                <polyline points="12 19 5 12 12 5"/>
-              </svg>
-              Previous
-            </button>
-            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
-              Next
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </button>
-          </nav>
-        </section>
-
-        <!-- Step 3: Triggers, Permissions & Safe-Outputs -->
-        <section id="step-3" class="step-section" aria-labelledby="step-3-title">
-          <header class="step-header">
-            <span class="step-number">Step 3 of 5</span>
-            <h1 id="step-3-title" class="step-title">Triggers, Permissions &amp; Safe-Outputs</h1>
-            <p class="step-duration">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              25 minutes
-            </p>
-          </header>
-
-          <p>Giving an AI agent access to your repository demands a strong security model. The frontmatter is where you keep agents on a short, well-defined leash.</p>
-
-          <h2>Triggers — <code>on:</code></h2>
-          <p>The <code>on:</code> block defines <em>when</em> a workflow runs, using the same event syntax as GitHub Actions.</p>
-          <pre><code>on:
+<p data-i18n-html="agentic-workflows.step2.anatomyP2">The YAML <strong>frontmatter</strong> (between the <code>---</code> markers) controls execution; the <strong>markdown body</strong> is the agent's task in plain language.</p>
+<div class="info-box note">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<line x1="12" x2="12" y1="16" y2="12"></line>
+<line x1="12" x2="12.01" y1="8" y2="8"></line>
+</svg>
+<div class="info-box-content">
+<strong data-i18n="agentic-workflows.step2.tipTitle">Tip</strong>
+<p data-i18n-html="agentic-workflows.step2.tipP1">You can start from a curated example instead of a blank file with <code>gh aw add</code>, which pulls in a workflow from the Agentics collection and generates its compiled YAML.</p>
+</div>
+</div>
+<div class="info-box tip">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12c.5.5 1 1.2 1 2h6c0-.8.5-1.5 1-2a7 7 0 00-4-12z"></path>
+</svg>
+<div class="info-box-content">
+<strong data-i18n="agentic-workflows.step2.challengeTitle">Mini Challenge (2 min): Read the frontmatter</strong>
+<p data-i18n-html="agentic-workflows.step2.challengeP1">Look at the minimal example above. In one sentence each, answer: <em>when</em> does this workflow run, <em>what</em> can it read, and <em>what</em> is the single thing it's allowed to write back? Being able to answer these three at a glance is the core safety skill for gh-aw.</p>
+</div>
+</div>
+<nav aria-label="Step navigation" class="step-navigation" data-i18n-attr="aria-label:agentic-workflows.stepNav.aria">
+<button aria-label="Previous step" class="step-nav-button step-nav-prev" data-i18n-attr="aria-label:common.stepNav.previousAria">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<line x1="19" x2="5" y1="12" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg><span data-i18n="common.stepNav.previous">Previous</span></button>
+<button aria-label="Next step" class="step-nav-button primary step-nav-next" data-i18n-attr="aria-label:common.stepNav.nextAria"><span data-i18n="common.stepNav.next">Next</span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</button>
+</nav>
+</section>
+<!-- Step 3: Triggers, Permissions & Safe-Outputs -->
+<section aria-labelledby="step-3-title" class="step-section" id="step-3">
+<header class="step-header">
+<span class="step-number" data-i18n="agentic-workflows.step3.number">Step 3 of 5</span>
+<h1 class="step-title" data-i18n="agentic-workflows.step3.title" id="step-3-title">Triggers, Permissions &amp; Safe-Outputs</h1>
+<p class="step-duration">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg><span data-i18n="agentic-workflows.step3.duration">25 minutes</span></p>
+</header>
+<p data-i18n="agentic-workflows.step3.intro">Giving an AI agent access to your repository demands a strong security model. The frontmatter is where you keep agents on a short, well-defined leash.</p>
+<h2 data-i18n-html="agentic-workflows.step3.triggersTitle">Triggers — <code>on:</code></h2>
+<p data-i18n-html="agentic-workflows.step3.triggersP1">The <code>on:</code> block defines <em>when</em> a workflow runs, using the same event syntax as GitHub Actions.</p>
+<pre><code>on:
   issues:
     types: [opened, reopened]
   schedule:
     - cron: "0 9 * * 1"   # every Monday at 09:00 UTC
   workflow_dispatch:        # allow manual runs</code></pre>
-
-          <h2>Permissions — Read-Only by Default</h2>
-          <p>Agentic workflows default to <strong>read-only</strong> permissions. The agent can read context but cannot directly write to your repository.</p>
-          <pre><code>permissions: read-all</code></pre>
-
-          <h2>Safe-Outputs — Controlled Writes</h2>
-          <p>Because the agent has no direct write access, all write operations flow through <strong><code>safe-outputs</code></strong>: a set of sanitized, validated GitHub operations. The agent proposes an output; gh-aw validates and performs it.</p>
-          <pre><code>safe-outputs:
+<h2 data-i18n="agentic-workflows.step3.permissionsTitle">Permissions — Read-Only by Default</h2>
+<p data-i18n-html="agentic-workflows.step3.permissionsP1">Agentic workflows default to <strong>read-only</strong> permissions. The agent can read context but cannot directly write to your repository.</p>
+<pre><code>permissions: read-all</code></pre>
+<h2 data-i18n="agentic-workflows.step3.safeOutputsTitle">Safe-Outputs — Controlled Writes</h2>
+<p data-i18n-html="agentic-workflows.step3.safeOutputsP1">Because the agent has no direct write access, all write operations flow through <strong><code>safe-outputs</code></strong>: a set of sanitized, validated GitHub operations. The agent proposes an output; gh-aw validates and performs it.</p>
+<pre><code>safe-outputs:
   add-comment:          # post a comment
   add-labels:
     allowed: [bug, question, needs-info]
   create-issue:         # open a new issue
   create-pull-request:  # open a PR with changes</code></pre>
-          <p>This separation means even if the agent is led astray, it can only perform the narrow, pre-approved actions you declared — never arbitrary writes.</p>
-
-          <div class="info-box warning">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
-              <line x1="12" y1="9" x2="12" y2="13"/>
-              <line x1="12" y1="17" x2="12.01" y2="17"/>
-            </svg>
-            <div class="info-box-content">
-              <strong>Principle of least privilege</strong>
-              <p>Declare only the safe-outputs a workflow actually needs, and constrain them (e.g., an <code>allowed</code> label list). Access can also be gated to team members so untrusted contributors can't trigger privileged agent actions.</p>
-            </div>
-          </div>
-
-          <h2>Why This Matters</h2>
-          <ul>
-            <li><strong>No direct write access</strong> — Reduces blast radius if an agent misbehaves.</li>
-            <li><strong>Validated operations</strong> — Outputs are sanitized before they touch your repo.</li>
-            <li><strong>Auditable</strong> — Each action is explicit in the frontmatter and visible in run logs.</li>
-          </ul>
-
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="19" y1="12" x2="5" y2="12"/>
-                <polyline points="12 19 5 12 12 5"/>
-              </svg>
-              Previous
-            </button>
-            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
-              Next
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </button>
-          </nav>
-        </section>
-
-        <!-- Step 4: Compiling & Running -->
-        <section id="step-4" class="step-section" aria-labelledby="step-4-title">
-          <header class="step-header">
-            <span class="step-number">Step 4 of 5</span>
-            <h1 id="step-4-title" class="step-title">Compiling &amp; Running</h1>
-            <p class="step-duration">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              20 minutes
-            </p>
-          </header>
-
-          <p>A markdown workflow doesn't run directly — it is <strong>compiled</strong> into a hardened GitHub Actions workflow first. Think of it like compiling code: you write human-friendly markdown, the compiler produces machine-ready YAML.</p>
-
-          <h2>Compile to a Lock File</h2>
-          <pre><code># Compile every markdown workflow in the repo
+<p data-i18n="agentic-workflows.step3.safeOutputsP2">This separation means even if the agent is led astray, it can only perform the narrow, pre-approved actions you declared — never arbitrary writes.</p>
+<div class="info-box warning">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path>
+<line x1="12" x2="12" y1="9" y2="13"></line>
+<line x1="12" x2="12.01" y1="17" y2="17"></line>
+</svg>
+<div class="info-box-content">
+<strong data-i18n="agentic-workflows.step3.leastPrivilegeTitle">Principle of least privilege</strong>
+<p data-i18n-html="agentic-workflows.step3.leastPrivilegeP1">Declare only the safe-outputs a workflow actually needs, and constrain them (e.g., an <code>allowed</code> label list). Access can also be gated to team members so untrusted contributors can't trigger privileged agent actions.</p>
+</div>
+</div>
+<h2 data-i18n="agentic-workflows.step3.whyTitle">Why This Matters</h2>
+<ul>
+<li data-i18n-html="agentic-workflows.step3.whyLi1"><strong>No direct write access</strong> — Reduces blast radius if an agent misbehaves.</li>
+<li data-i18n-html="agentic-workflows.step3.whyLi2"><strong>Validated operations</strong> — Outputs are sanitized before they touch your repo.</li>
+<li data-i18n-html="agentic-workflows.step3.whyLi3"><strong>Auditable</strong> — Each action is explicit in the frontmatter and visible in run logs.</li>
+</ul>
+<div class="info-box tip">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12c.5.5 1 1.2 1 2h6c0-.8.5-1.5 1-2a7 7 0 00-4-12z"></path>
+</svg>
+<div class="info-box-content">
+<strong data-i18n="agentic-workflows.step3.challengeTitle">Mini Challenge (3 min): Tighten the permissions</strong>
+<p data-i18n-html="agentic-workflows.step3.challengeP1">Imagine an agent that only needs to <em>label</em> issues. Write the <code>safe-outputs</code> block that grants the least privilege required — just <code>add-labels</code> with an <code>allowed</code> list — and nothing more. Then ask yourself: what's the worst a compromised prompt could do with this configuration?</p>
+</div>
+</div>
+<nav aria-label="Step navigation" class="step-navigation" data-i18n-attr="aria-label:agentic-workflows.stepNav.aria">
+<button aria-label="Previous step" class="step-nav-button step-nav-prev" data-i18n-attr="aria-label:common.stepNav.previousAria">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<line x1="19" x2="5" y1="12" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg><span data-i18n="common.stepNav.previous">Previous</span></button>
+<button aria-label="Next step" class="step-nav-button primary step-nav-next" data-i18n-attr="aria-label:common.stepNav.nextAria"><span data-i18n="common.stepNav.next">Next</span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</button>
+</nav>
+</section>
+<!-- Step 4: Compiling & Running -->
+<section aria-labelledby="step-4-title" class="step-section" id="step-4">
+<header class="step-header">
+<span class="step-number" data-i18n="agentic-workflows.step4.number">Step 4 of 5</span>
+<h1 class="step-title" data-i18n="agentic-workflows.step4.title" id="step-4-title">Compiling &amp; Running</h1>
+<p class="step-duration">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg><span data-i18n="agentic-workflows.step4.duration">20 minutes</span></p>
+</header>
+<p data-i18n-html="agentic-workflows.step4.intro">A markdown workflow doesn't run directly — it is <strong>compiled</strong> into a hardened GitHub Actions workflow first. Think of it like compiling code: you write human-friendly markdown, the compiler produces machine-ready YAML.</p>
+<h2 data-i18n="agentic-workflows.step4.compileTitle">Compile to a Lock File</h2>
+<pre><code># Compile every markdown workflow in the repo
 gh aw compile</code></pre>
-          <p>For each <code>name.md</code>, gh-aw generates a <code>name.lock.yml</code> — the compiled workflow GitHub Actions actually runs. Compilation:</p>
-          <ul>
-            <li><strong>Validates</strong> your frontmatter configuration.</li>
-            <li><strong>Applies security hardening</strong> (sandboxing, restricted permissions).</li>
-            <li><strong>Embeds</strong> the frontmatter and loads the markdown body at runtime.</li>
-          </ul>
-
-          <div class="info-box note">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="12" y1="16" x2="12" y2="12"/>
-              <line x1="12" y1="8" x2="12.01" y2="8"/>
-            </svg>
-            <div class="info-box-content">
-              <strong>Commit the lock file</strong>
-              <p>Commit both the <code>.md</code> source and the generated <code>.lock.yml</code>. The lock file is what runs in Actions; keeping it in version control makes runs reviewable and reproducible. Recompile whenever you change the markdown.</p>
-            </div>
-          </div>
-
-          <h2>Run and Observe</h2>
-          <p>Once committed, the workflow triggers automatically on its configured events. You can also dispatch and inspect runs from the CLI:</p>
-          <pre><code># Trigger a run (push pending changes first if needed)
+<p data-i18n-html="agentic-workflows.step4.compileP1">For each <code>name.md</code>, gh-aw generates a <code>name.lock.yml</code> — the compiled workflow GitHub Actions actually runs. Compilation:</p>
+<ul>
+<li data-i18n-html="agentic-workflows.step4.compileLi1"><strong>Validates</strong> your frontmatter configuration.</li>
+<li data-i18n-html="agentic-workflows.step4.compileLi2"><strong>Applies security hardening</strong> (sandboxing, restricted permissions).</li>
+<li data-i18n-html="agentic-workflows.step4.compileLi3"><strong>Embeds</strong> the frontmatter and loads the markdown body at runtime.</li>
+</ul>
+<div class="info-box note">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<line x1="12" x2="12" y1="16" y2="12"></line>
+<line x1="12" x2="12.01" y1="8" y2="8"></line>
+</svg>
+<div class="info-box-content">
+<strong data-i18n="agentic-workflows.step4.lockTitle">Commit the lock file</strong>
+<p data-i18n-html="agentic-workflows.step4.lockP1">Commit both the <code>.md</code> source and the generated <code>.lock.yml</code>. The lock file is what runs in Actions; keeping it in version control makes runs reviewable and reproducible. Recompile whenever you change the markdown.</p>
+</div>
+</div>
+<h2 data-i18n="agentic-workflows.step4.runTitle">Run and Observe</h2>
+<p data-i18n="agentic-workflows.step4.runP1">Once committed, the workflow triggers automatically on its configured events. You can also dispatch and inspect runs from the CLI:</p>
+<pre><code># Trigger a run (push pending changes first if needed)
 gh aw run --push
 
 # Inspect logs for a workflow's runs
 gh aw logs</code></pre>
-          <p>Each run spins up an AI agent in a containerized environment, which reads the repository context, performs the task described in your markdown, and emits any declared safe-outputs.</p>
-
-          <h2>The Lifecycle</h2>
-          <pre><code>write .md   ->  gh aw compile  ->  .lock.yml committed
+<p data-i18n="agentic-workflows.step4.runP2">Each run spins up an AI agent in a containerized environment, which reads the repository context, performs the task described in your markdown, and emits any declared safe-outputs.</p>
+<h2 data-i18n="agentic-workflows.step4.lifecycleTitle">The Lifecycle</h2>
+<pre><code>write .md   -&gt;  gh aw compile  -&gt;  .lock.yml committed
                                        |
                 trigger fires (issue, schedule, manual)
                                        |
                   agent runs in container, reads context
                                        |
-                       safe-outputs validated & applied</code></pre>
-
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="19" y1="12" x2="5" y2="12"/>
-                <polyline points="12 19 5 12 12 5"/>
-              </svg>
-              Previous
-            </button>
-            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
-              Next
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </button>
-          </nav>
-        </section>
-
-        <!-- Step 5: Hands-on: Issue-Triage Agent -->
-        <section id="step-5" class="step-section" aria-labelledby="step-5-title">
-          <header class="step-header">
-            <span class="step-number">Step 5 of 5</span>
-            <h1 id="step-5-title" class="step-title">Hands-on: Build an Issue-Triage Agent</h1>
-            <p class="step-duration">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              30 minutes
-            </p>
-          </header>
-
-          <p>Put it all together by building an agentic workflow that triages newly opened issues: it asks for missing details and applies an appropriate label.</p>
-
-          <h2>The Goal</h2>
-          <p>When an issue is opened, the agent should read it, decide whether it has enough information, comment asking for anything missing, and apply one label from an allowed set.</p>
-
-          <h2>Step-by-Step</h2>
-          <ol>
-            <li><strong>Prepare</strong> a test repository with Actions enabled, then run <code>gh aw init</code>.</li>
-            <li><strong>Create</strong> <code>.github/workflows/issue-triage.md</code> with the workflow below.</li>
-            <li><strong>Compile</strong> it with <code>gh aw compile</code> and commit both files.</li>
-            <li><strong>Open</strong> a deliberately vague test issue and watch the agent respond.</li>
-          </ol>
-
-          <pre><code>---
+                       safe-outputs validated &amp; applied</code></pre>
+<div class="info-box tip">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12c.5.5 1 1.2 1 2h6c0-.8.5-1.5 1-2a7 7 0 00-4-12z"></path>
+</svg>
+<div class="info-box-content">
+<strong data-i18n="agentic-workflows.step4.challengeTitle">Mini Challenge (2 min): Why compile?</strong>
+<p data-i18n-html="agentic-workflows.step4.challengeP1">The <code>.md</code> file is what you edit, but the committed <code>.lock.yml</code> is what actually runs. In your own words, why does gh-aw compile to a locked YAML file instead of running the markdown directly? (Hint: think about reproducibility and reviewing exactly what will execute.)</p>
+</div>
+</div>
+<nav aria-label="Step navigation" class="step-navigation" data-i18n-attr="aria-label:agentic-workflows.stepNav.aria">
+<button aria-label="Previous step" class="step-nav-button step-nav-prev" data-i18n-attr="aria-label:common.stepNav.previousAria">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<line x1="19" x2="5" y1="12" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg><span data-i18n="common.stepNav.previous">Previous</span></button>
+<button aria-label="Next step" class="step-nav-button primary step-nav-next" data-i18n-attr="aria-label:common.stepNav.nextAria"><span data-i18n="common.stepNav.next">Next</span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</button>
+</nav>
+</section>
+<!-- Step 5: Hands-on: Issue-Triage Agent -->
+<section aria-labelledby="step-5-title" class="step-section" id="step-5">
+<header class="step-header">
+<span class="step-number" data-i18n="agentic-workflows.step5.number">Step 5 of 5</span>
+<h1 class="step-title" data-i18n="agentic-workflows.step5.title" id="step-5-title">Hands-on: Build an Issue-Triage Agent</h1>
+<p class="step-duration">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg><span data-i18n="agentic-workflows.step5.duration">30 minutes</span></p>
+</header>
+<p data-i18n="agentic-workflows.step5.intro">Put it all together by building an agentic workflow that triages newly opened issues: it asks for missing details and applies an appropriate label.</p>
+<h2 data-i18n="agentic-workflows.step5.goalTitle">The Goal</h2>
+<p data-i18n="agentic-workflows.step5.goalP1">When an issue is opened, the agent should read it, decide whether it has enough information, comment asking for anything missing, and apply one label from an allowed set.</p>
+<h2 data-i18n="agentic-workflows.step5.stepsTitle">Step-by-Step</h2>
+<ol>
+<li data-i18n-html="agentic-workflows.step5.stepsLi1"><strong>Prepare</strong> a test repository with Actions enabled, then run <code>gh aw init</code>.</li>
+<li data-i18n-html="agentic-workflows.step5.stepsLi2"><strong>Create</strong> <code>.github/workflows/issue-triage.md</code> with the workflow below.</li>
+<li data-i18n-html="agentic-workflows.step5.stepsLi3"><strong>Compile</strong> it with <code>gh aw compile</code> and commit both files.</li>
+<li data-i18n-html="agentic-workflows.step5.stepsLi4"><strong>Open</strong> a deliberately vague test issue and watch the agent respond.</li>
+</ol>
+<pre><code>---
 on:
   issues:
     types: [opened]
@@ -472,72 +442,107 @@ Read the newly opened issue's title and body.
    precisely what's missing. If it is complete, do not comment.
 
 Be concise and welcoming in any comment you write.</code></pre>
-
-          <h2>Verify the Behavior</h2>
-          <ul>
-            <li>A vague issue receives a polite comment requesting specifics and a <code>needs-info</code> label.</li>
-            <li>A well-formed bug report receives a <code>bug</code> label and no unnecessary comment.</li>
-            <li>The run logs (<code>gh aw logs</code>) show the agent's reasoning and the safe-outputs it emitted.</li>
-          </ul>
-
-          <div class="info-box note">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="12" y1="16" x2="12" y2="12"/>
-              <line x1="12" y1="8" x2="12.01" y2="8"/>
-            </svg>
-            <div class="info-box-content">
-              <strong>Extend it</strong>
-              <p>Add a weekly <code>schedule:</code> trigger that summarizes stale issues, or a PR-review workflow that flags risky diffs. Browse the <a href="https://github.com/githubnext/agentics" target="_blank" rel="noopener noreferrer">Agentics collection</a> for inspiration and copy a workflow with <code>gh aw add</code>.</p>
-            </div>
-          </div>
-
-          <h3>What's Next?</h3>
-          <ul>
-            <li>Combine this path with <a href="spec-driven-development.html">Spec-Driven Development</a> — have an agentic workflow turn specs into draft PRs.</li>
-            <li>Tighten security: gate triggers to team members and minimize safe-outputs.</li>
-            <li>Roll an agentic workflow into a real repository and measure the time it saves.</li>
-          </ul>
-
-          <h3>Resources</h3>
-          <ul>
-            <li><a href="https://github.github.com/gh-aw/" target="_blank" rel="noopener noreferrer">GitHub Agentic Workflows documentation</a></li>
-            <li><a href="https://github.com/github/gh-aw" target="_blank" rel="noopener noreferrer">gh-aw repository</a></li>
-            <li><a href="https://github.com/githubnext/agentics" target="_blank" rel="noopener noreferrer">Agentics workflow collection</a></li>
-            <li><a href="https://docs.github.com/actions" target="_blank" rel="noopener noreferrer">GitHub Actions Documentation</a></li>
-          </ul>
-
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="19" y1="12" x2="5" y2="12"/>
-                <polyline points="12 19 5 12 12 5"/>
-              </svg>
-              Previous
-            </button>
-            <a href="../index.html" class="step-nav-button primary">
-              Back to Home
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                <polyline points="9 22 9 12 15 12 15 22"/>
-              </svg>
-            </a>
-          </nav>
-        </section>
-
-      </div>
-    </main>
-  </div>
-
-  <!-- Mobile sidebar toggle button -->
-  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <line x1="3" y1="12" x2="21" y2="12"/>
-      <line x1="3" y1="6" x2="21" y2="6"/>
-      <line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
-  </button>
-
-  <script src="js/main.js"></script>
+<h2 data-i18n="agentic-workflows.step5.verifyTitle">Verify the Behavior</h2>
+<ul>
+<li data-i18n-html="agentic-workflows.step5.verifyLi1">A vague issue receives a polite comment requesting specifics and a <code>needs-info</code> label.</li>
+<li data-i18n-html="agentic-workflows.step5.verifyLi2">A well-formed bug report receives a <code>bug</code> label and no unnecessary comment.</li>
+<li data-i18n-html="agentic-workflows.step5.verifyLi3">The run logs (<code>gh aw logs</code>) show the agent's reasoning and the safe-outputs it emitted.</li>
+</ul>
+<h2 data-i18n="agentic-workflows.step5.chooseTitle">Now Choose Your Own Agent</h2>
+<p data-i18n-html="agentic-workflows.step5.chooseP1">You've built the issue-triage agent step by step. Now pick <strong>one</strong> of the use-cases below and build it yourself using the same pattern: a trigger, read-only permissions, a narrow set of safe-outputs, and a clear natural-language prompt. Each one is a realistic agent teams actually run.</p>
+<div class="use-case-grid">
+<h3 data-i18n="agentic-workflows.step5.useCase1Title">1. Documentation Drift Detection</h3>
+<p data-i18n-html="agentic-workflows.step5.useCase1Goal"><strong>Goal:</strong> Catch docs that fall out of sync with the code they describe.</p>
+<ul>
+<li data-i18n-html="agentic-workflows.step5.useCase1Li1"><strong>Trigger:</strong> <code>pull_request</code> (on changes to source files), or a weekly <code>schedule:</code>.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase1Li2"><strong>What it does:</strong> Compares changed code against related docs/README sections and flags mismatches (renamed functions, changed flags, removed options).</li>
+<li data-i18n-html="agentic-workflows.step5.useCase1Li3"><strong>Safe-outputs:</strong> <code>add-comment</code> on the PR listing the drift, or <code>create-issue</code> for scheduled scans.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase1Li4"><strong>Stretch:</strong> Have it propose the corrected doc snippet inline.</li>
+</ul>
+<h3 data-i18n="agentic-workflows.step5.useCase2Title">2. Test Quality Analyzer (AAA Pattern)</h3>
+<p data-i18n-html="agentic-workflows.step5.useCase2Goal"><strong>Goal:</strong> Nudge tests toward a clear Arrange–Act–Assert structure.</p>
+<ul>
+<li data-i18n-html="agentic-workflows.step5.useCase2Li1"><strong>Trigger:</strong> <code>pull_request</code> on changes to test files.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase2Li2"><strong>What it does:</strong> Reviews added/modified tests and flags ones with no clear arrange/act/assert separation, multiple assertions testing unrelated things, or missing edge cases.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase2Li3"><strong>Safe-outputs:</strong> <code>add-comment</code> with specific, line-referenced suggestions.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase2Li4"><strong>Stretch:</strong> Apply a <code>needs-test-cleanup</code> label when issues are found.</li>
+</ul>
+<h3 data-i18n="agentic-workflows.step5.useCase3Title">3. Security Scanner</h3>
+<p data-i18n-html="agentic-workflows.step5.useCase3Goal"><strong>Goal:</strong> Surface likely-exploitable issues early, with low noise.</p>
+<ul>
+<li data-i18n-html="agentic-workflows.step5.useCase3Li1"><strong>Trigger:</strong> <code>pull_request</code>, gated to changed code files.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase3Li2"><strong>What it does:</strong> Looks for hard-coded secrets, unvalidated input reaching sensitive sinks, missing authz checks, and unsafe deserialization — reporting only high-confidence findings.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase3Li3"><strong>Safe-outputs:</strong> <code>add-comment</code> with severity and rationale; optionally <code>add-labels: [security-review]</code>.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase3Li4"><strong>Stretch:</strong> Require a maintainer ack before the PR can merge.</li>
+</ul>
+<h3 data-i18n="agentic-workflows.step5.useCase4Title">4. Duplicate Code Scanner</h3>
+<p data-i18n-html="agentic-workflows.step5.useCase4Goal"><strong>Goal:</strong> Spot copy-paste and near-duplicate logic worth refactoring.</p>
+<ul>
+<li data-i18n-html="agentic-workflows.step5.useCase4Li1"><strong>Trigger:</strong> <code>pull_request</code>, or a weekly <code>schedule:</code> across the repo.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase4Li2"><strong>What it does:</strong> Identifies blocks that are structurally similar to existing code and suggests where a shared helper could live.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase4Li3"><strong>Safe-outputs:</strong> <code>add-comment</code> pointing at the duplicate locations, or <code>create-issue</code> with a refactor proposal.</li>
+<li data-i18n-html="agentic-workflows.step5.useCase4Li4"><strong>Stretch:</strong> Have it draft the extracted helper function in the comment.</li>
+</ul>
+</div>
+<div class="info-box tip">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12c.5.5 1 1.2 1 2h6c0-.8.5-1.5 1-2a7 7 0 00-4-12z"></path>
+</svg>
+<div class="info-box-content">
+<strong data-i18n="agentic-workflows.step5.checklistTitle">Build checklist</strong>
+<p data-i18n-html="agentic-workflows.step5.checklistP1">For whichever you pick: (1) start from <code>permissions: read-all</code>, (2) allow only the safe-outputs you actually need, (3) keep the prompt focused on <em>one</em> job, (4) compile with <code>gh aw compile</code>, and (5) test against a deliberately flawed example so you can see it fire.</p>
+</div>
+</div>
+<div class="info-box note">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<line x1="12" x2="12" y1="16" y2="12"></line>
+<line x1="12" x2="12.01" y1="8" y2="8"></line>
+</svg>
+<div class="info-box-content">
+<strong data-i18n="agentic-workflows.step5.extendTitle">Extend it</strong>
+<p data-i18n-html="agentic-workflows.step5.extendP1">Add a weekly <code>schedule:</code> trigger that summarizes stale issues, or a PR-review workflow that flags risky diffs. Browse the <a href="https://github.com/githubnext/agentics" rel="noopener noreferrer" target="_blank">Agentics collection</a> for inspiration and copy a workflow with <code>gh aw add</code>.</p>
+</div>
+</div>
+<h3 data-i18n="agentic-workflows.step5.nextTitle">What's Next?</h3>
+<ul>
+<li data-i18n-html="agentic-workflows.step5.nextLi1">Combine this path with <a href="spec-driven-development.html">Spec-Driven Development</a> — have an agentic workflow turn specs into draft PRs.</li>
+<li data-i18n-html="agentic-workflows.step5.nextLi2">Tighten security: gate triggers to team members and minimize safe-outputs.</li>
+<li data-i18n-html="agentic-workflows.step5.nextLi3">Roll an agentic workflow into a real repository and measure the time it saves.</li>
+</ul>
+<h3 data-i18n="agentic-workflows.step5.resourcesTitle">Resources</h3>
+<ul>
+<li><a data-i18n="agentic-workflows.step5.resource1" href="https://github.github.com/gh-aw/" rel="noopener noreferrer" target="_blank">GitHub Agentic Workflows documentation</a></li>
+<li><a data-i18n="agentic-workflows.step5.resource2" href="https://github.com/github/gh-aw" rel="noopener noreferrer" target="_blank">gh-aw repository</a></li>
+<li><a data-i18n="agentic-workflows.step5.resource3" href="https://github.com/githubnext/agentics" rel="noopener noreferrer" target="_blank">Agentics workflow collection</a></li>
+<li><a data-i18n="agentic-workflows.step5.resource4" href="https://docs.github.com/actions" rel="noopener noreferrer" target="_blank">GitHub Actions Documentation</a></li>
+</ul>
+<nav aria-label="Step navigation" class="step-navigation" data-i18n-attr="aria-label:agentic-workflows.stepNav.aria">
+<button aria-label="Previous step" class="step-nav-button step-nav-prev" data-i18n-attr="aria-label:common.stepNav.previousAria">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<line x1="19" x2="5" y1="12" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg><span data-i18n="common.stepNav.previous">Previous</span></button>
+<a class="step-nav-button primary" href="../index.html"><span data-i18n="agentic-workflows.nav.backHome">Back to Home</span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+</a>
+</nav>
+</section>
+</div>
+</main>
+</div>
+<!-- Mobile sidebar toggle button -->
+<button aria-expanded="false" aria-label="Toggle navigation menu" class="sidebar-toggle" data-i18n-attr="aria-label:common.sidebar.toggleAria" id="sidebar-toggle">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
+</button>
+<script src="i18n/bundles/agentic-workflows.js"></script><script src="js/i18n.js"></script><script src="js/main.js"></script>
 </body>
 </html>
+
+

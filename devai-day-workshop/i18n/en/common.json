@@ -1,0 +1,22 @@
+{
+  "common.nav.home": "Home",
+  "common.nav.prerequisites": "Prerequisites",
+  "common.nav.startCoding": "Start Coding with AI",
+  "common.nav.proFeatures": "Copilot Pro Features",
+  "common.nav.extendedCapabilities": "Extended Capabilities",
+  "common.nav.specDriven": "Spec-Driven Development",
+  "common.nav.agenticWorkflows": "Agentic Workflows",
+  "common.nav.ariaMain": "Main navigation",
+  "common.theme.dark": "Dark",
+  "common.theme.light": "Light",
+  "common.theme.toggleAria": "Toggle dark mode",
+  "common.lang.selectAria": "Select language",
+  "common.lang.label": "Language",
+  "common.stepNav.previous": "Previous",
+  "common.stepNav.next": "Next",
+  "common.stepNav.previousAria": "Previous step",
+  "common.stepNav.nextAria": "Next step",
+  "common.sidebar.toggleAria": "Toggle navigation menu",
+  "common.sidebar.stepsAria": "Workshop steps",
+  "common.footer.html": "DevAI Day Workshop &bull; <a href=\"https://github.com\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> &bull; Built with \u2764\ufe0f for developers"
+}

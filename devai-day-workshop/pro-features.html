@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="pro-features.meta.title">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore advanced GitHub Copilot features for professional development. Learn about Coding Agent, custom agents, PR generation, and code review.">
+  <meta name="description" content="Explore advanced GitHub Copilot features for professional development. Learn about Coding Agent, custom agents, PR generation, and code review." data-i18n-attr="content:pro-features.meta.description">
   <meta name="theme-color" content="#6C21D9">
   <title>Copilot Pro Features - DevAI Day Workshop</title>
   <link rel="stylesheet" href="css/styles.css">
@@ -14,7 +14,7 @@
     body { font-family: 'Inter', var(--font-family); }
   </style>
 </head>
-<body>
+<body data-i18n-page="pro-features">
   <!-- Header -->
   <header class="site-header" role="banner">
     <div class="header-brand">
@@ -23,35 +23,46 @@
       </svg>
       <a href="../index.html" class="header-title">DevAI Day Workshop</a>
     </div>
-    <nav class="header-nav" aria-label="Main navigation">
-      <a href="../index.html" class="header-nav-link">Home</a>
-      <a href="start-coding.html" class="header-nav-link">Start Coding with AI</a>
-      <a href="pro-features.html" class="header-nav-link active">Copilot Pro Features</a>
-      <a href="extended-capabilities.html" class="header-nav-link">Extended Capabilities</a>
-      <a href="spec-driven-development.html" class="header-nav-link">Spec-Driven Development</a>
-      <a href="agentic-workflows.html" class="header-nav-link">Agentic Workflows</a>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+    <nav class="header-nav" aria-label="Main navigation" data-i18n-attr="aria-label:common.nav.ariaMain">
+      <a href="../index.html" class="header-nav-link"><span data-i18n="common.nav.home">Home</span></a>
+      <a href="start-coding.html" class="header-nav-link"><span data-i18n="common.nav.startCoding">Start Coding with AI</span></a>
+      <a href="pro-features.html" class="header-nav-link active"><span data-i18n="common.nav.proFeatures">Copilot Pro Features</span></a>
+      <a href="extended-capabilities.html" class="header-nav-link"><span data-i18n="common.nav.extendedCapabilities">Extended Capabilities</span></a>
+      <a href="spec-driven-development.html" class="header-nav-link"><span data-i18n="common.nav.specDriven">Spec-Driven Development</span></a>
+      <a href="agentic-workflows.html" class="header-nav-link"><span data-i18n="common.nav.agenticWorkflows">Agentic Workflows</span></a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" data-i18n-attr="aria-label:common.theme.toggleAria">
         <svg class="theme-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span class="theme-toggle-text">Dark</span>
       </button>
+      <div class="lang-switcher" data-lang-switcher>
+        <svg class="lang-switcher-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <select class="lang-select" aria-label="Select language" data-i18n-attr="aria-label:common.lang.selectAria">
+          <option value="en">EN</option>
+          <option value="nl">NL</option>
+        </select>
+      </div>
     </nav>
   </header>
 
   <!-- Workshop Layout -->
   <div class="workshop-layout">
     <!-- Sidebar Navigation -->
-    <aside id="workshop-sidebar" class="workshop-sidebar" role="navigation" aria-label="Workshop steps">
+    <aside id="workshop-sidebar" class="workshop-sidebar" role="navigation" aria-label="Workshop steps" data-i18n-attr="aria-label:common.sidebar.stepsAria">
       <div class="sidebar-header">
         <a href="../index.html" class="sidebar-back">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <line x1="19" y1="12" x2="5" y2="12"/>
             <polyline points="12 19 5 12 12 5"/>
           </svg>
-          Back to Home
+          <span data-i18n="pro-features.sidebar.backHome">Back to Home</span>
         </a>
-        <h2 class="sidebar-title">Copilot Pro Features</h2>
+        <h2 class="sidebar-title" data-i18n="pro-features.sidebar.title">Copilot Pro Features</h2>
       </div>
       
       <nav class="sidebar-nav">
@@ -59,43 +70,43 @@
           <li class="sidebar-nav-item">
             <a href="#step-1" class="sidebar-nav-link active">
               <span class="sidebar-nav-number">1</span>
-              <span class="sidebar-nav-text">Create Repo with Coding Agent</span>
+              <span class="sidebar-nav-text" data-i18n="pro-features.sidebar.step1">Create Repo with Coding Agent</span>
             </a>
           </li>
           <li class="sidebar-nav-item">
             <a href="#step-2" class="sidebar-nav-link">
               <span class="sidebar-nav-number">2</span>
-              <span class="sidebar-nav-text">Plan &amp; Design Generation</span>
+              <span class="sidebar-nav-text" data-i18n="pro-features.sidebar.step2">Plan &amp; Design Generation</span>
             </a>
           </li>
           <li class="sidebar-nav-item">
             <a href="#step-3" class="sidebar-nav-link">
               <span class="sidebar-nav-number">3</span>
-              <span class="sidebar-nav-text">Develop with Coding Agent</span>
+              <span class="sidebar-nav-text" data-i18n="pro-features.sidebar.step3">Develop with Coding Agent</span>
             </a>
           </li>
           <li class="sidebar-nav-item">
             <a href="#step-4" class="sidebar-nav-link">
               <span class="sidebar-nav-number">4</span>
-              <span class="sidebar-nav-text">Copilot Instructions</span>
+              <span class="sidebar-nav-text" data-i18n="pro-features.sidebar.step4">Copilot Instructions</span>
             </a>
           </li>
           <li class="sidebar-nav-item">
             <a href="#step-5" class="sidebar-nav-link">
               <span class="sidebar-nav-number">5</span>
-              <span class="sidebar-nav-text">PR &amp; Code Review</span>
+              <span class="sidebar-nav-text" data-i18n="pro-features.sidebar.step5">PR &amp; Code Review</span>
             </a>
           </li>
           <li class="sidebar-nav-item">
             <a href="#step-6" class="sidebar-nav-link">
               <span class="sidebar-nav-number">6</span>
-              <span class="sidebar-nav-text">Copilot Spaces</span>
+              <span class="sidebar-nav-text" data-i18n="pro-features.sidebar.step6">Copilot Spaces</span>
             </a>
           </li>
           <li class="sidebar-nav-item">
             <a href="#step-7" class="sidebar-nav-link">
               <span class="sidebar-nav-number">7</span>
-              <span class="sidebar-nav-text">Agent Mission Control</span>
+              <span class="sidebar-nav-text" data-i18n="pro-features.sidebar.step7">Agent Mission Control</span>
             </a>
           </li>
         </ol>
@@ -103,7 +114,7 @@
 
       <div class="progress-container">
         <div class="progress-label">
-          <span>Progress</span>
+          <span data-i18n="pro-features.progress.label">Progress</span>
           <span><span class="progress-current">1</span> / <span class="progress-total">7</span></span>
         </div>
         <div class="progress-bar">
@@ -122,36 +133,36 @@
         <!-- Step 1: Create Repo with Coding Agent -->
         <section id="step-1" class="step-section active" aria-labelledby="step-1-title">
           <header class="step-header">
-            <span class="step-number">Step 1 of 7</span>
-            <h1 id="step-1-title" class="step-title">Create New Repo with Coding Agent</h1>
+            <span class="step-number" data-i18n="pro-features.step1.number">Step 1 of 7</span>
+            <h1 id="step-1-title" class="step-title"><span data-i18n="pro-features.step1.title">Create New Repo with Coding Agent</span></h1>
             <p class="step-duration">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
-              15 minutes
+              <span data-i18n="pro-features.step1.duration">15 minutes</span>
             </p>
           </header>
 
-          <p>The Copilot Coding Agent can create entire repositories from scratch based on your requirements. This is ideal for bootstrapping new projects quickly.</p>
+          <p data-i18n="pro-features.step1.p1">The Copilot Coding Agent can create entire repositories from scratch based on your requirements. This is ideal for bootstrapping new projects quickly.</p>
 
-          <h2>Getting Started</h2>
-          <p>Follow these steps to create a new repository using the Copilot Coding Agent:</p>
+          <h2 data-i18n="pro-features.step1.heading1">Getting Started</h2>
+          <p data-i18n="pro-features.step1.p2">Follow these steps to create a new repository using the Copilot Coding Agent:</p>
           <ol>
-            <li>Log in to <a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com</a> with your GitHub account</li>
-            <li>Click the <strong>+</strong> icon in the top right and select <strong>New repository</strong></li>
-            <li>Enter a <strong>Repository name</strong> (e.g., "employee-management-app")</li>
-            <li>Add a <strong>Description</strong> for your project (e.g., "An enterprise employee management system with CRUD operations")</li>
-            <li>In the text box at the bottom, add your app requirements and click <strong>Create repository</strong></li>
+            <li data-i18n-html="pro-features.step1.li1">Log in to <a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com</a> with your GitHub account</li>
+            <li data-i18n-html="pro-features.step1.li2">Click the <strong>+</strong> icon in the top right and select <strong>New repository</strong></li>
+            <li data-i18n-html="pro-features.step1.li3">Enter a <strong>Repository name</strong> (e.g., "employee-management-app")</li>
+            <li data-i18n-html="pro-features.step1.li4">Add a <strong>Description</strong> for your project (e.g., "An enterprise employee management system with CRUD operations")</li>
+            <li data-i18n-html="pro-features.step1.li5">In the text box at the bottom, add your app requirements and click <strong>Create repository</strong></li>
           </ol>
 
           <figure class="image-container">
-            <img src="img/create-repo.png" alt="Creating a new repository with Copilot Coding Agent">
-            <figcaption>Create a new repository with Copilot Coding Agent</figcaption>
+            <img src="img/create-repo.png" alt="Creating a new repository with Copilot Coding Agent" data-i18n-attr="alt:pro-features.step1.image1.alt">
+            <figcaption data-i18n="pro-features.step1.fig1">Create a new repository with Copilot Coding Agent</figcaption>
           </figure>
 
-          <h2>Example App Requirement</h2>
-          <p>Here's an example of what you can enter in the requirement textbox:</p>
+          <h2 data-i18n="pro-features.step1.heading2">Example App Requirement</h2>
+          <p data-i18n="pro-features.step1.p3">Here's an example of what you can enter in the requirement textbox:</p>
 
           <pre><code>Create an Employee Management System with the following features:
 
@@ -163,8 +174,8 @@
 
 Tech Stack: Node.js with Express, SQLite database, React frontend</code></pre>
 
-          <h2>Working on an Existing Repository</h2>
-          <p>You can also use Copilot to generate ideas and create issues for existing applications. Here's an example prompt to create enhancement issues:</p>
+          <h2 data-i18n="pro-features.step1.heading3">Working on an Existing Repository</h2>
+          <p data-i18n="pro-features.step1.p4">You can also use Copilot to generate ideas and create issues for existing applications. Here's an example prompt to create enhancement issues:</p>
 
           <pre><code>Please create 3 issues to customize the Pomodoro timer.
 
@@ -184,21 +195,21 @@ Pattern C: Adding Gamification Elements
 - Weekly/monthly statistics: More detailed graph display</code></pre>
 
           <figure class="image-container">
-            <img src="img/create-issues.png" alt="Creating issues with Copilot">
-            <figcaption>Copilot generates structured issues based on your requirements</figcaption>
+            <img src="img/create-issues.png" alt="Creating issues with Copilot" data-i18n-attr="alt:pro-features.step1.image2.alt">
+            <figcaption data-i18n="pro-features.step1.fig2">Copilot generates structured issues based on your requirements</figcaption>
           </figure>
 
-          <h2>Assign to Coding Agent</h2>
-          <p>After creating the issues:</p>
+          <h2 data-i18n="pro-features.step1.heading4">Assign to Coding Agent</h2>
+          <p data-i18n="pro-features.step1.p5">After creating the issues:</p>
           <ol>
-            <li>Review and edit each issue as needed</li>
-            <li>Click <strong>Create</strong> to save the issue</li>
-            <li>In the <strong>Assignees</strong> section, select <strong>Copilot</strong> to assign the Coding Agent</li>
+            <li data-i18n="pro-features.step1.li6">Review and edit each issue as needed</li>
+            <li data-i18n-html="pro-features.step1.li7">Click <strong>Create</strong> to save the issue</li>
+            <li data-i18n-html="pro-features.step1.li8">In the <strong>Assignees</strong> section, select <strong>Copilot</strong> to assign the Coding Agent</li>
           </ol>
 
           <figure class="image-container">
-            <img src="img/issue-to-cca.png" alt="Assigning Coding Agent to an issue">
-            <figcaption>Assign Copilot as the implementer for your issue</figcaption>
+            <img src="img/issue-to-cca.png" alt="Assigning Coding Agent to an issue" data-i18n-attr="alt:pro-features.step1.image3.alt">
+            <figcaption data-i18n="pro-features.step1.fig3">Assign Copilot as the implementer for your issue</figcaption>
           </figure>
 
           <div class="info-box note">
@@ -208,21 +219,21 @@ Pattern C: Adding Gamification Elements
               <line x1="12" y1="8" x2="12.01" y2="8"/>
             </svg>
             <div class="info-box-content">
-              <strong>Note</strong>
-              <p>The Coding Agent works asynchronously. It will create a branch, implement the changes, and open a Pull Request automatically.</p>
+              <strong data-i18n="pro-features.step1.label1">Note</strong>
+              <p data-i18n="pro-features.step1.p6">The Coding Agent works asynchronously. It will create a branch, implement the changes, and open a Pull Request automatically.</p>
             </div>
           </div>
 
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" disabled aria-label="Previous step">
+          <nav class="step-navigation" aria-label="Step navigation" data-i18n-attr="aria-label:pro-features.stepNav.aria">
+            <button class="step-nav-button step-nav-prev" disabled aria-label="Previous step" data-i18n-attr="aria-label:common.stepNav.previousAria">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="19" y1="12" x2="5" y2="12"/>
                 <polyline points="12 19 5 12 12 5"/>
               </svg>
-              Previous
+              <span data-i18n="common.stepNav.previous">Previous</span>
             </button>
-            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
-              Next
+            <button class="step-nav-button primary step-nav-next" aria-label="Next step" data-i18n-attr="aria-label:common.stepNav.nextAria">
+              <span data-i18n="common.stepNav.next">Next</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"/>
                 <polyline points="12 5 19 12 12 19"/>
@@ -234,24 +245,24 @@ Pattern C: Adding Gamification Elements
         <!-- Step 2: Plan & Design Generation -->
         <section id="step-2" class="step-section" aria-labelledby="step-2-title">
           <header class="step-header">
-            <span class="step-number">Step 2 of 7</span>
-            <h1 id="step-2-title" class="step-title">Plan &amp; Design Document Generation</h1>
+            <span class="step-number" data-i18n="pro-features.step2.number">Step 2 of 7</span>
+            <h1 id="step-2-title" class="step-title"><span data-i18n="pro-features.step2.title">Plan &amp; Design Document Generation</span></h1>
             <p class="step-duration">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
-              15 minutes
+              <span data-i18n="pro-features.step2.duration">15 minutes</span>
             </p>
           </header>
 
-          <p>Use Custom Agents to generate comprehensive planning and design documents for your projects.</p>
+          <p data-i18n="pro-features.step2.p1">Use Custom Agents to generate comprehensive planning and design documents for your projects.</p>
 
-          <h2>What are Custom Agents?</h2>
-          <p>Custom Agents are specialized AI assistants you can create for specific tasks. They can be configured with specific instructions, capabilities, and constraints.</p>
+          <h2 data-i18n="pro-features.step2.heading1">What are Custom Agents?</h2>
+          <p data-i18n="pro-features.step2.p2">Custom Agents are specialized AI assistants you can create for specific tasks. They can be configured with specific instructions, capabilities, and constraints.</p>
 
-          <h2>Creating a Design Document Agent</h2>
-          <p>Create a file at <code>.github/agents/design-doc.agent.md</code>:</p>
+          <h2 data-i18n="pro-features.step2.heading2">Creating a Design Document Agent</h2>
+          <p data-i18n-html="pro-features.step2.p3">Create a file at <code>.github/agents/design-doc.agent.md</code>:</p>
 
           <pre><code>---
 name: design-doc-generator
@@ -274,33 +285,33 @@ Always include:
 - Trade-offs and alternatives considered
 - Success metrics</code></pre>
 
-<p> Refer the Custom Agents from <a href="https://github.com/github/awesome-copilot/tree/main/agents" target="_blank" rel="noopener noreferrer">Awesome Copilot Repository</a>.</p>
+<p data-i18n-html="pro-features.step2.p4"> Refer the Custom Agents from <a href="https://github.com/github/awesome-copilot/tree/main/agents" target="_blank" rel="noopener noreferrer">Awesome Copilot Repository</a>.</p>
 
-          <h2>Using the Agent</h2>
-          <p>Once created, you can invoke the custom agent in Copilot Agent sessions. The agent will generate design documents following your specified format.</p>
+          <h2 data-i18n="pro-features.step2.heading3">Using the Agent</h2>
+          <p data-i18n="pro-features.step2.p5">Once created, you can invoke the custom agent in Copilot Agent sessions. The agent will generate design documents following your specified format.</p>
 
           <figure class="image-container">
-            <img src="img/custom-agent.png" alt="Custom Agent generating a design document">
-            <figcaption>Select Custom Agent as the implementer for your task</figcaption>
+            <img src="img/custom-agent.png" alt="Custom Agent generating a design document" data-i18n-attr="alt:pro-features.step2.image1.alt">
+            <figcaption data-i18n="pro-features.step2.fig1">Select Custom Agent as the implementer for your task</figcaption>
           </figure>
 
-          <h2>Example Prompt</h2>
+          <h2 data-i18n="pro-features.step2.heading4">Example Prompt</h2>
           <pre><code>Create a technical design document for a real-time chat feature with the following requirements:
 - WebSocket-based communication
 - Message persistence in PostgreSQL
 - Support for 10,000 concurrent users
 - End-to-end encryption</code></pre>
 
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
+          <nav class="step-navigation" aria-label="Step navigation" data-i18n-attr="aria-label:pro-features.stepNav.aria">
+            <button class="step-nav-button step-nav-prev" aria-label="Previous step" data-i18n-attr="aria-label:common.stepNav.previousAria">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="19" y1="12" x2="5" y2="12"/>
                 <polyline points="12 19 5 12 12 5"/>
               </svg>
-              Previous
+              <span data-i18n="common.stepNav.previous">Previous</span>
             </button>
-            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
-              Next
+            <button class="step-nav-button primary step-nav-next" aria-label="Next step" data-i18n-attr="aria-label:common.stepNav.nextAria">
+              <span data-i18n="common.stepNav.next">Next</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"/>
                 <polyline points="12 5 19 12 12 19"/>
@@ -312,45 +323,45 @@ Always include:
         <!-- Step 3: Develop with Coding Agent -->
         <section id="step-3" class="step-section" aria-labelledby="step-3-title">
           <header class="step-header">
-            <span class="step-number">Step 3 of 7</span>
-            <h1 id="step-3-title" class="step-title">Develop Functionality with Coding Agent</h1>
+            <span class="step-number" data-i18n="pro-features.step3.number">Step 3 of 7</span>
+            <h1 id="step-3-title" class="step-title"><span data-i18n="pro-features.step3.title">Develop Functionality with Coding Agent</span></h1>
             <p class="step-duration">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
-              20 minutes
+              <span data-i18n="pro-features.step3.duration">20 minutes</span>
             </p>
           </header>
 
-          <p>The Copilot Coding Agent can implement entire features autonomously, including running tests and fixing issues.</p>
+          <p data-i18n="pro-features.step3.p1">The Copilot Coding Agent can implement entire features autonomously, including running tests and fixing issues.</p>
 
-          <h2>How the Coding Agent Works</h2>
-          <p>When you assign the Coding Agent to an issue:</p>
+          <h2 data-i18n="pro-features.step3.heading1">How the Coding Agent Works</h2>
+          <p data-i18n="pro-features.step3.p2">When you assign the Coding Agent to an issue:</p>
           <ol>
-            <li><strong>Analysis</strong>: The agent reads the issue, related code, and project structure</li>
-            <li><strong>Planning</strong>: It creates a plan for the implementation</li>
-            <li><strong>Implementation</strong>: Writes code, creates files, and modifies existing ones</li>
-            <li><strong>Testing</strong>: Runs tests and fixes any failures</li>
-            <li><strong>Pull Request</strong>: Opens a PR with a detailed description</li>
+            <li data-i18n-html="pro-features.step3.li1"><strong>Analysis</strong>: The agent reads the issue, related code, and project structure</li>
+            <li data-i18n-html="pro-features.step3.li2"><strong>Planning</strong>: It creates a plan for the implementation</li>
+            <li data-i18n-html="pro-features.step3.li3"><strong>Implementation</strong>: Writes code, creates files, and modifies existing ones</li>
+            <li data-i18n-html="pro-features.step3.li4"><strong>Testing</strong>: Runs tests and fixes any failures</li>
+            <li data-i18n-html="pro-features.step3.li5"><strong>Pull Request</strong>: Opens a PR with a detailed description</li>
           </ol>
 
           <figure class="image-container">
-            <img src="img/gh-issue.png" alt="Coding Agent progress">
-            <figcaption>Track the Coding Agent's progress in the Pull Requests page</figcaption>
+            <img src="img/gh-issue.png" alt="Coding Agent progress" data-i18n-attr="alt:pro-features.step3.image1.alt">
+            <figcaption data-i18n="pro-features.step3.fig1">Track the Coding Agent's progress in the Pull Requests page</figcaption>
           </figure>
 
-          <h2>Expected Results</h2>
-          <p>After a few minutes, you'll see:</p>
+          <h2 data-i18n="pro-features.step3.heading2">Expected Results</h2>
+          <p data-i18n="pro-features.step3.p3">After a few minutes, you'll see:</p>
           <ul>
-            <li><strong>Branch created</strong>: A new feature branch</li>
-            <li><strong>Pull Request</strong>: With detailed description of changes</li>
-            <li><strong>Tests passing</strong>: Unit and integration tests</li>
+            <li data-i18n-html="pro-features.step3.li6"><strong>Branch created</strong>: A new feature branch</li>
+            <li data-i18n-html="pro-features.step3.li7"><strong>Pull Request</strong>: With detailed description of changes</li>
+            <li data-i18n-html="pro-features.step3.li8"><strong>Tests passing</strong>: Unit and integration tests</li>
           </ul>
 
           <figure class="image-container">
-            <img src="img/cca-pr.png" alt="Completed Pull Request">
-            <figcaption>A complete Pull Request generated by the Coding Agent</figcaption>
+            <img src="img/cca-pr.png" alt="Completed Pull Request" data-i18n-attr="alt:pro-features.step3.image2.alt">
+            <figcaption data-i18n="pro-features.step3.fig2">A complete Pull Request generated by the Coding Agent</figcaption>
           </figure>
 
           <div class="info-box tip">
@@ -360,21 +371,21 @@ Always include:
               <line x1="12" y1="8" x2="12.01" y2="8"/>
             </svg>
             <div class="info-box-content">
-              <strong>MCP Servers</strong>
-              <p>The Coding Agent uses GitHub MCP Server and Playwright MCP Server by default, enabling it to visually verify implementations and interact with GitHub APIs.</p>
+              <strong data-i18n="pro-features.step3.label1">MCP Servers</strong>
+              <p data-i18n="pro-features.step3.p4">The Coding Agent uses GitHub MCP Server and Playwright MCP Server by default, enabling it to visually verify implementations and interact with GitHub APIs.</p>
             </div>
           </div>
 
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
+          <nav class="step-navigation" aria-label="Step navigation" data-i18n-attr="aria-label:pro-features.stepNav.aria">
+            <button class="step-nav-button step-nav-prev" aria-label="Previous step" data-i18n-attr="aria-label:common.stepNav.previousAria">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="19" y1="12" x2="5" y2="12"/>
                 <polyline points="12 19 5 12 12 5"/>
               </svg>
-              Previous
+              <span data-i18n="common.stepNav.previous">Previous</span>
             </button>
-            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
-              Next
+            <button class="step-nav-button primary step-nav-next" aria-label="Next step" data-i18n-attr="aria-label:common.stepNav.nextAria">
+              <span data-i18n="common.stepNav.next">Next</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"/>
                 <polyline points="12 5 19 12 12 19"/>
@@ -386,21 +397,21 @@ Always include:
         <!-- Step 4: Copilot Instructions -->
         <section id="step-4" class="step-section" aria-labelledby="step-4-title">
           <header class="step-header">
-            <span class="step-number">Step 4 of 7</span>
-            <h1 id="step-4-title" class="step-title">Copilot Instructions</h1>
+            <span class="step-number" data-i18n="pro-features.step4.number">Step 4 of 7</span>
+            <h1 id="step-4-title" class="step-title"><span data-i18n="pro-features.step4.title">Copilot Instructions</span></h1>
             <p class="step-duration">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
-              10 minutes
+              <span data-i18n="pro-features.step4.duration">10 minutes</span>
             </p>
           </header>
 
-          <p>Copilot Instructions help you customize how Copilot generates code and reviews your work. They're essential for maintaining consistency across your team.</p>
+          <p data-i18n="pro-features.step4.p1">Copilot Instructions help you customize how Copilot generates code and reviews your work. They're essential for maintaining consistency across your team.</p>
 
-          <h2>Setting Up Instructions</h2>
-          <p>Create a file at <code>.github/copilot-instructions.md</code> in your repository:</p>
+          <h2 data-i18n="pro-features.step4.heading1">Setting Up Instructions</h2>
+          <p data-i18n-html="pro-features.step4.p2">Create a file at <code>.github/copilot-instructions.md</code> in your repository:</p>
 
           <pre><code># Copilot Instructions for This Project
 
@@ -431,12 +442,12 @@ Always include:
 - Validate all user input
 - Use parameterized queries for database operations</code></pre>
 
-          <h2>Benefits of Instructions</h2>
+          <h2 data-i18n="pro-features.step4.heading2">Benefits of Instructions</h2>
           <ul>
-            <li><strong>Consistency</strong>: All Copilot suggestions follow your team's conventions</li>
-            <li><strong>Onboarding</strong>: New team members learn patterns through AI suggestions</li>
-            <li><strong>Quality</strong>: Reduces review cycles by getting things right the first time</li>
-            <li><strong>Documentation</strong>: Serves as living documentation of coding standards</li>
+            <li data-i18n-html="pro-features.step4.li1"><strong>Consistency</strong>: All Copilot suggestions follow your team's conventions</li>
+            <li data-i18n-html="pro-features.step4.li2"><strong>Onboarding</strong>: New team members learn patterns through AI suggestions</li>
+            <li data-i18n-html="pro-features.step4.li3"><strong>Quality</strong>: Reduces review cycles by getting things right the first time</li>
+            <li data-i18n-html="pro-features.step4.li4"><strong>Documentation</strong>: Serves as living documentation of coding standards</li>
           </ul>
 
           <div class="info-box tip">
@@ -446,21 +457,21 @@ Always include:
               <line x1="12" y1="8" x2="12.01" y2="8"/>
             </svg>
             <div class="info-box-content">
-              <strong>Tip</strong>
-              <p>Check out <a href="https://github.com/github/awesome-copilot/tree/main/instructions" target="_blank" rel="noopener noreferrer">Awesome Copilot Repository</a> for great examples of custom instructions you can adapt for your project.</p>
+              <strong data-i18n="pro-features.step4.label1">Tip</strong>
+              <p data-i18n-html="pro-features.step4.p3">Check out <a href="https://github.com/github/awesome-copilot/tree/main/instructions" target="_blank" rel="noopener noreferrer">Awesome Copilot Repository</a> for great examples of custom instructions you can adapt for your project.</p>
             </div>
           </div>
 
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
+          <nav class="step-navigation" aria-label="Step navigation" data-i18n-attr="aria-label:pro-features.stepNav.aria">
+            <button class="step-nav-button step-nav-prev" aria-label="Previous step" data-i18n-attr="aria-label:common.stepNav.previousAria">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="19" y1="12" x2="5" y2="12"/>
                 <polyline points="12 19 5 12 12 5"/>
               </svg>
-              Previous
+              <span data-i18n="common.stepNav.previous">Previous</span>
             </button>
-            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
-              Next
+            <button class="step-nav-button primary step-nav-next" aria-label="Next step" data-i18n-attr="aria-label:common.stepNav.nextAria">
+              <span data-i18n="common.stepNav.next">Next</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"/>
                 <polyline points="12 5 19 12 12 19"/>
@@ -472,57 +483,57 @@ Always include:
         <!-- Step 5: PR & Code Review -->
         <section id="step-5" class="step-section" aria-labelledby="step-5-title">
           <header class="step-header">
-            <span class="step-number">Step 5 of 7</span>
-            <h1 id="step-5-title" class="step-title">Generate PR &amp; Code Review</h1>
+            <span class="step-number" data-i18n="pro-features.step5.number">Step 5 of 7</span>
+            <h1 id="step-5-title" class="step-title"><span data-i18n="pro-features.step5.title">Generate PR &amp; Code Review</span></h1>
             <p class="step-duration">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
-              15 minutes
+              <span data-i18n="pro-features.step5.duration">15 minutes</span>
             </p>
           </header>
 
-          <p>Copilot can help you generate Pull Request descriptions and review code. This is especially useful for solo developers or small teams.</p>
+          <p data-i18n="pro-features.step5.p1">Copilot can help you generate Pull Request descriptions and review code. This is especially useful for solo developers or small teams.</p>
 
-          <h2>Generate PR Description</h2>
-          <p>When creating a Pull Request, use Copilot to generate a comprehensive description:</p>
+          <h2 data-i18n="pro-features.step5.heading1">Generate PR Description</h2>
+          <p data-i18n="pro-features.step5.p2">When creating a Pull Request, use Copilot to generate a comprehensive description:</p>
           <ol>
-            <li>Open the Pull Request creation page</li>
-            <li>Click the <strong>Copilot icon</strong></li>
-            <li>Select <strong>Summary</strong></li>
+            <li data-i18n="pro-features.step5.li1">Open the Pull Request creation page</li>
+            <li data-i18n-html="pro-features.step5.li2">Click the <strong>Copilot icon</strong></li>
+            <li data-i18n-html="pro-features.step5.li3">Select <strong>Summary</strong></li>
           </ol>
 
           <figure class="image-container">
-            <img src="img/pr-summary1.png" alt="Request PR summary">
-            <figcaption>Click the Copilot icon to generate a PR summary</figcaption>
+            <img src="img/pr-summary1.png" alt="Request PR summary" data-i18n-attr="alt:pro-features.step5.image1.alt">
+            <figcaption data-i18n="pro-features.step5.fig1">Click the Copilot icon to generate a PR summary</figcaption>
           </figure>
 
-          <p>Copilot generates a summary based on your commits:</p>
+          <p data-i18n="pro-features.step5.p3">Copilot generates a summary based on your commits:</p>
 
           <figure class="image-container">
-            <img src="img/pr-summary2.png" alt="PR summary result">
-            <figcaption>Generated PR description with context and changes</figcaption>
+            <img src="img/pr-summary2.png" alt="PR summary result" data-i18n-attr="alt:pro-features.step5.image2.alt">
+            <figcaption data-i18n="pro-features.step5.fig2">Generated PR description with context and changes</figcaption>
           </figure>
 
-          <h2>Request Copilot Review</h2>
-          <p>Add Copilot as a reviewer to get AI-powered code review:</p>
+          <h2 data-i18n="pro-features.step5.heading2">Request Copilot Review</h2>
+          <p data-i18n="pro-features.step5.p4">Add Copilot as a reviewer to get AI-powered code review:</p>
           <ol>
-            <li>In the <strong>Reviewers</strong> section, click to add a reviewer</li>
-            <li>Select <strong>Copilot</strong></li>
+            <li data-i18n-html="pro-features.step5.li4">In the <strong>Reviewers</strong> section, click to add a reviewer</li>
+            <li data-i18n-html="pro-features.step5.li5">Select <strong>Copilot</strong></li>
           </ol>
 
           <figure class="image-container">
-            <img src="img/ccr.png" alt="Adding Copilot as reviewer">
-            <figcaption>Add Copilot as a PR reviewer</figcaption>
+            <img src="img/ccr.png" alt="Adding Copilot as reviewer" data-i18n-attr="alt:pro-features.step5.image3.alt">
+            <figcaption data-i18n="pro-features.step5.fig3">Add Copilot as a PR reviewer</figcaption>
           </figure>
 
-          <h2>Review Results</h2>
-          <p>Copilot's review includes:</p>
+          <h2 data-i18n="pro-features.step5.heading3">Review Results</h2>
+          <p data-i18n="pro-features.step5.p5">Copilot's review includes:</p>
           <ul>
-            <li><strong>Pull Request Overview</strong>: Summary of code changes</li>
-            <li><strong>Issues Identified</strong>: Potential problems or bugs</li>
-            <li><strong>Improvement Suggestions</strong>: Code quality recommendations</li>
+            <li data-i18n-html="pro-features.step5.li6"><strong>Pull Request Overview</strong>: Summary of code changes</li>
+            <li data-i18n-html="pro-features.step5.li7"><strong>Issues Identified</strong>: Potential problems or bugs</li>
+            <li data-i18n-html="pro-features.step5.li8"><strong>Improvement Suggestions</strong>: Code quality recommendations</li>
           </ul>
 
           <div class="info-box tip">
@@ -532,21 +543,21 @@ Always include:
               <line x1="12" y1="8" x2="12.01" y2="8"/>
             </svg>
             <div class="info-box-content">
-              <strong>Auto-assign Setting</strong>
-              <p>Enable automatic Copilot reviews via Settings → Branches → Rulesets → "Require a pull request before merging" → "Automatically request Copilot code review"</p>
+              <strong data-i18n="pro-features.step5.label1">Auto-assign Setting</strong>
+              <p data-i18n="pro-features.step5.p6">Enable automatic Copilot reviews via Settings → Branches → Rulesets → "Require a pull request before merging" → "Automatically request Copilot code review"</p>
             </div>
           </div>
 
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
+          <nav class="step-navigation" aria-label="Step navigation" data-i18n-attr="aria-label:pro-features.stepNav.aria">
+            <button class="step-nav-button step-nav-prev" aria-label="Previous step" data-i18n-attr="aria-label:common.stepNav.previousAria">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="19" y1="12" x2="5" y2="12"/>
                 <polyline points="12 19 5 12 12 5"/>
               </svg>
-              Previous
+              <span data-i18n="common.stepNav.previous">Previous</span>
             </button>
-            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
-              Next
+            <button class="step-nav-button primary step-nav-next" aria-label="Next step" data-i18n-attr="aria-label:common.stepNav.nextAria">
+              <span data-i18n="common.stepNav.next">Next</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"/>
                 <polyline points="12 5 19 12 12 19"/>
@@ -558,58 +569,58 @@ Always include:
         <!-- Step 6: Copilot Spaces -->
         <section id="step-6" class="step-section" aria-labelledby="step-6-title">
           <header class="step-header">
-            <span class="step-number">Step 6 of 7</span>
-            <h1 id="step-6-title" class="step-title">Copilot Spaces</h1>
+            <span class="step-number" data-i18n="pro-features.step6.number">Step 6 of 7</span>
+            <h1 id="step-6-title" class="step-title"><span data-i18n="pro-features.step6.title">Copilot Spaces</span></h1>
             <p class="step-duration">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
-              15 minutes
+              <span data-i18n="pro-features.step6.duration">15 minutes</span>
             </p>
           </header>
 
-          <p>Copilot Spaces help you organize project knowledge and provide context to Copilot for better code suggestions and understanding.</p>
+          <p data-i18n="pro-features.step6.p1">Copilot Spaces help you organize project knowledge and provide context to Copilot for better code suggestions and understanding.</p>
 
-          <h2>What are Copilot Spaces?</h2>
-          <p>Copilot Spaces allow you to create a shared context for your project by attaching relevant documents, files, and resources that Copilot can reference when generating code or answering questions.</p>
+          <h2 data-i18n="pro-features.step6.heading1">What are Copilot Spaces?</h2>
+          <p data-i18n="pro-features.step6.p2">Copilot Spaces allow you to create a shared context for your project by attaching relevant documents, files, and resources that Copilot can reference when generating code or answering questions.</p>
 
-          <h2>Creating a Copilot Space</h2>
+          <h2 data-i18n="pro-features.step6.heading2">Creating a Copilot Space</h2>
           <ol>
-            <li>Go to <a href="https://github.com/copilot/spaces" target="_blank" rel="noopener noreferrer">github.com/copilot/spaces</a></li>
-            <li>Click <strong>Create new Space</strong></li>
-            <li>Give your Space a descriptive name (e.g., "Employee Management App")</li>
+            <li data-i18n-html="pro-features.step6.li1">Go to <a href="https://github.com/copilot/spaces" target="_blank" rel="noopener noreferrer">github.com/copilot/spaces</a></li>
+            <li data-i18n-html="pro-features.step6.li2">Click <strong>Create new Space</strong></li>
+            <li data-i18n="pro-features.step6.li3">Give your Space a descriptive name (e.g., "Employee Management App")</li>
           </ol>
 
           <figure class="image-container">
-            <img src="img/create-space.png" alt="Creating a new Copilot Space">
-            <figcaption>Create a new Copilot Space for your project</figcaption>
+            <img src="img/create-space.png" alt="Creating a new Copilot Space" data-i18n-attr="alt:pro-features.step6.image1.alt">
+            <figcaption data-i18n="pro-features.step6.fig1">Create a new Copilot Space for your project</figcaption>
           </figure>
 
-          <h2>Attaching Context to Your Space</h2>
-          <p>Add relevant files and documents to help Copilot understand your project:</p>
+          <h2 data-i18n="pro-features.step6.heading3">Attaching Context to Your Space</h2>
+          <p data-i18n="pro-features.step6.p3">Add relevant files and documents to help Copilot understand your project:</p>
           <ul>
-            <li><code>README.md</code> - Project overview and setup instructions</li>
-            <li><code>architecture.md</code> - System architecture documentation</li>
-            <li><code>CONTRIBUTING.md</code> - Coding guidelines and conventions</li>
-            <li>API specifications, design documents, and technical specs</li>
+            <li data-i18n-html="pro-features.step6.li4"><code>README.md</code> - Project overview and setup instructions</li>
+            <li data-i18n-html="pro-features.step6.li5"><code>architecture.md</code> - System architecture documentation</li>
+            <li data-i18n-html="pro-features.step6.li6"><code>CONTRIBUTING.md</code> - Coding guidelines and conventions</li>
+            <li data-i18n="pro-features.step6.li7">API specifications, design documents, and technical specs</li>
           </ul>
 
           <figure class="image-container">
-            <img src="img/spaces-attach.png" alt="Attaching files to Copilot Space">
-            <figcaption>Attach project documentation to your Space</figcaption>
+            <img src="img/spaces-attach.png" alt="Attaching files to Copilot Space" data-i18n-attr="alt:pro-features.step6.image2.alt">
+            <figcaption data-i18n="pro-features.step6.fig2">Attach project documentation to your Space</figcaption>
           </figure>
 
-          <h2>Using Your Space</h2>
-          <p>Once your Space is set up, you can:</p>
+          <h2 data-i18n="pro-features.step6.heading4">Using Your Space</h2>
+          <p data-i18n="pro-features.step6.p4">Once your Space is set up, you can:</p>
           <ul>
-            <li><strong>Ask questions</strong>: Query Copilot about your project architecture or codebase</li>
-            <li><strong>Get context-aware suggestions</strong>: Copilot references your attached files for better code completion</li>
-            <li><strong>Share with team</strong>: Collaborate with team members using the same context</li>
+            <li data-i18n-html="pro-features.step6.li8"><strong>Ask questions</strong>: Query Copilot about your project architecture or codebase</li>
+            <li data-i18n-html="pro-features.step6.li9"><strong>Get context-aware suggestions</strong>: Copilot references your attached files for better code completion</li>
+            <li data-i18n-html="pro-features.step6.li10"><strong>Share with team</strong>: Collaborate with team members using the same context</li>
           </ul>
 
-          <h2>Example Usage</h2>
-          <p>With your architecture document attached, you can ask:</p>
+          <h2 data-i18n="pro-features.step6.heading5">Example Usage</h2>
+          <p data-i18n="pro-features.step6.p5">With your architecture document attached, you can ask:</p>
           <pre><code>Based on the architecture in this Space, create a new API endpoint for user authentication that follows our established patterns.</code></pre>
 
           <div class="info-box tip">
@@ -619,21 +630,21 @@ Always include:
               <line x1="12" y1="8" x2="12.01" y2="8"/>
             </svg>
             <div class="info-box-content">
-              <strong>Tip</strong>
-              <p>Keep your Space updated as your project evolves. Regularly add new documentation and remove outdated files to ensure Copilot has the most current context.</p>
+              <strong data-i18n="pro-features.step6.label1">Tip</strong>
+              <p data-i18n="pro-features.step6.p6">Keep your Space updated as your project evolves. Regularly add new documentation and remove outdated files to ensure Copilot has the most current context.</p>
             </div>
           </div>
 
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
+          <nav class="step-navigation" aria-label="Step navigation" data-i18n-attr="aria-label:pro-features.stepNav.aria">
+            <button class="step-nav-button step-nav-prev" aria-label="Previous step" data-i18n-attr="aria-label:common.stepNav.previousAria">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="19" y1="12" x2="5" y2="12"/>
                 <polyline points="12 19 5 12 12 5"/>
               </svg>
-              Previous
+              <span data-i18n="common.stepNav.previous">Previous</span>
             </button>
-            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
-              Next
+            <button class="step-nav-button primary step-nav-next" aria-label="Next step" data-i18n-attr="aria-label:common.stepNav.nextAria">
+              <span data-i18n="common.stepNav.next">Next</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"/>
                 <polyline points="12 5 19 12 12 19"/>
@@ -645,85 +656,85 @@ Always include:
         <!-- Step 7: Agent Mission Control -->
         <section id="step-7" class="step-section" aria-labelledby="step-7-title">
           <header class="step-header">
-            <span class="step-number">Step 7 of 7</span>
-            <h1 id="step-7-title" class="step-title">Agent Mission Control</h1>
+            <span class="step-number" data-i18n="pro-features.step7.number">Step 7 of 7</span>
+            <h1 id="step-7-title" class="step-title"><span data-i18n="pro-features.step7.title">Agent Mission Control</span></h1>
             <p class="step-duration">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
-              10 minutes
+              <span data-i18n="pro-features.step7.duration">10 minutes</span>
             </p>
           </header>
 
-          <p>Agent Mission Control gives you visibility and control over all Coding Agent activities in your organization.</p>
-          <p>Go to <a href="https://github.com/copilot/agents" target="_blank" rel="noopener noreferrer">github.com/copilot/agents</a></p>
-          <h2>Monitoring Agent Activity</h2>
-          <p>Track what the Coding Agent is doing across your repositories:</p>
+          <p data-i18n="pro-features.step7.p1">Agent Mission Control gives you visibility and control over all Coding Agent activities in your organization.</p>
+          <p data-i18n-html="pro-features.step7.p2">Go to <a href="https://github.com/copilot/agents" target="_blank" rel="noopener noreferrer">github.com/copilot/agents</a></p>
+          <h2 data-i18n="pro-features.step7.heading1">Monitoring Agent Activity</h2>
+          <p data-i18n="pro-features.step7.p3">Track what the Coding Agent is doing across your repositories:</p>
           <ul>
-            <li><strong>Active Tasks</strong>: See which issues the agent is currently working on</li>
-            <li><strong>Completed Tasks</strong>: Review finished implementations</li>
-            <li><strong>Error States</strong>: Identify tasks that need intervention</li>
+            <li data-i18n-html="pro-features.step7.li1"><strong>Active Tasks</strong>: See which issues the agent is currently working on</li>
+            <li data-i18n-html="pro-features.step7.li2"><strong>Completed Tasks</strong>: Review finished implementations</li>
+            <li data-i18n-html="pro-features.step7.li3"><strong>Error States</strong>: Identify tasks that need intervention</li>
           </ul>
 
           <figure class="image-container">
-            <img src="img/agent-mission-ctrl.png" alt="Agent Mission Control dashboard">
-            <figcaption>Agent Mission Control dashboard</figcaption>
+            <img src="img/agent-mission-ctrl.png" alt="Agent Mission Control dashboard" data-i18n-attr="alt:pro-features.step7.image1.alt">
+            <figcaption data-i18n="pro-features.step7.fig1">Agent Mission Control dashboard</figcaption>
           </figure>
 
-          <h2>Steering Agent Behavior</h2>
-          <p>You can guide the agent's work in real-time:</p>
+          <h2 data-i18n="pro-features.step7.heading2">Steering Agent Behavior</h2>
+          <p data-i18n="pro-features.step7.p4">You can guide the agent's work in real-time:</p>
 
-          <h3>Comment on Pull Requests</h3>
-          <p>Add comments to PRs where agents are actively working, and request changes as needed:</p>
+          <h3 data-i18n="pro-features.step7.subheading1">Comment on Pull Requests</h3>
+          <p data-i18n="pro-features.step7.p5">Add comments to PRs where agents are actively working, and request changes as needed:</p>
           <pre><code>Please add error handling for the API call and include retry logic with exponential backoff.</code></pre>
 
-          <h3>Request Additional Work</h3>
-          <p>Ask the agent to do more in the PR comments:</p>
+          <h3 data-i18n="pro-features.step7.subheading2">Request Additional Work</h3>
+          <p data-i18n="pro-features.step7.p6">Ask the agent to do more in the PR comments:</p>
           <pre><code>@copilot Please also add unit tests for the new validation functions and update the README with usage examples.</code></pre>
 
-          <h2>Best Practices</h2>
+          <h2 data-i18n="pro-features.step7.heading3">Best Practices</h2>
           <ul>
-            <li><strong>Clear Issues</strong>: Write detailed issue descriptions with acceptance criteria</li>
-            <li><strong>Small Scope</strong>: Break large features into smaller, focused issues</li>
-            <li><strong>Review Promptly</strong>: The sooner you review, the sooner you can iterate</li>
-            <li><strong>Provide Feedback</strong>: Help the agent learn your preferences through comments</li>
+            <li data-i18n-html="pro-features.step7.li4"><strong>Clear Issues</strong>: Write detailed issue descriptions with acceptance criteria</li>
+            <li data-i18n-html="pro-features.step7.li5"><strong>Small Scope</strong>: Break large features into smaller, focused issues</li>
+            <li data-i18n-html="pro-features.step7.li6"><strong>Review Promptly</strong>: The sooner you review, the sooner you can iterate</li>
+            <li data-i18n-html="pro-features.step7.li7"><strong>Provide Feedback</strong>: Help the agent learn your preferences through comments</li>
           </ul>
 
-          <h2>🎉 Congratulations!</h2>
-          <p>You've completed the "Copilot Pro Features" learning path! You've learned:</p>
+          <h2 data-i18n="pro-features.step7.heading4">🎉 Congratulations!</h2>
+          <p data-i18n="pro-features.step7.p7">You've completed the "Copilot Pro Features" learning path! You've learned:</p>
           <ul>
-            <li>Using the Coding Agent to implement features autonomously</li>
-            <li>Creating custom agents and prompt files</li>
-            <li>Setting up Copilot Instructions for consistent code</li>
-            <li>Generating PR descriptions and conducting AI-powered reviews</li>
-            <li>Monitoring and steering agent activity</li>
+            <li data-i18n="pro-features.step7.li8">Using the Coding Agent to implement features autonomously</li>
+            <li data-i18n="pro-features.step7.li9">Creating custom agents and prompt files</li>
+            <li data-i18n="pro-features.step7.li10">Setting up Copilot Instructions for consistent code</li>
+            <li data-i18n="pro-features.step7.li11">Generating PR descriptions and conducting AI-powered reviews</li>
+            <li data-i18n="pro-features.step7.li12">Monitoring and steering agent activity</li>
           </ul>
 
-          <h3>Next Steps</h3>
+          <h3 data-i18n="pro-features.step7.subheading3">Next Steps</h3>
           <ul>
-            <li>Apply these features to your real projects</li>
-            <li>Create custom agents for your team's specific needs</li>
-            <li>Explore <a href="https://docs.github.com/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot Documentation</a> for advanced features</li>
+            <li data-i18n="pro-features.step7.li13">Apply these features to your real projects</li>
+            <li data-i18n="pro-features.step7.li14">Create custom agents for your team's specific needs</li>
+            <li data-i18n-html="pro-features.step7.li15">Explore <a href="https://docs.github.com/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot Documentation</a> for advanced features</li>
           </ul>
 
-          <h3>Resources</h3>
+          <h3 data-i18n="pro-features.step7.subheading4">Resources</h3>
           <ul>
-            <li><a href="https://docs.github.com/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot Documentation</a></li>
-            <li><a href="https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot Best Practices</a></li>
-            <li><a href="https://github.com/github/awesome-copilot" target="_blank" rel="noopener noreferrer">Curated list of examples, tools, and guides</a></li>
+            <li data-i18n-html="pro-features.step7.li16"><a href="https://docs.github.com/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot Documentation</a></li>
+            <li data-i18n-html="pro-features.step7.li17"><a href="https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot Best Practices</a></li>
+            <li data-i18n-html="pro-features.step7.li18"><a href="https://github.com/github/awesome-copilot" target="_blank" rel="noopener noreferrer">Curated list of examples, tools, and guides</a></li>
           </ul>
 
-          <nav class="step-navigation" aria-label="Step navigation">
-            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
+          <nav class="step-navigation" aria-label="Step navigation" data-i18n-attr="aria-label:pro-features.stepNav.aria">
+            <button class="step-nav-button step-nav-prev" aria-label="Previous step" data-i18n-attr="aria-label:common.stepNav.previousAria">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <line x1="19" y1="12" x2="5" y2="12"/>
                 <polyline points="12 19 5 12 12 5"/>
               </svg>
-              Previous
+              <span data-i18n="common.stepNav.previous">Previous</span>
             </button>
             <a href="../index.html" class="step-nav-button primary">
-              Back to Home
+              <span data-i18n="pro-features.step7.backHome">Back to Home</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
                 <polyline points="9 22 9 12 15 12 15 22"/>
@@ -737,7 +748,7 @@ Always include:
   </div>
 
   <!-- Mobile sidebar toggle button -->
-  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle navigation menu" aria-expanded="false" data-i18n-attr="aria-label:common.sidebar.toggleAria">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
       <line x1="3" y1="12" x2="21" y2="12"/>
       <line x1="3" y1="6" x2="21" y2="6"/>
@@ -745,6 +756,9 @@ Always include:
     </svg>
   </button>
 
+  <script src="i18n/bundles/pro-features.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
+

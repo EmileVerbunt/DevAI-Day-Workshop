@@ -1,0 +1,22 @@
+{
+  "common.nav.home": "Home",
+  "common.nav.prerequisites": "Vereisten",
+  "common.nav.startCoding": "Beginnen met AI-coderen",
+  "common.nav.proFeatures": "Copilot Pro-functies",
+  "common.nav.extendedCapabilities": "Uitgebreide mogelijkheden",
+  "common.nav.specDriven": "Spec-gedreven ontwikkeling",
+  "common.nav.agenticWorkflows": "Agentische workflows",
+  "common.nav.ariaMain": "Hoofdnavigatie",
+  "common.theme.dark": "Donker",
+  "common.theme.light": "Licht",
+  "common.theme.toggleAria": "Donkere modus schakelen",
+  "common.lang.selectAria": "Taal selecteren",
+  "common.lang.label": "Taal",
+  "common.stepNav.previous": "Vorige",
+  "common.stepNav.next": "Volgende",
+  "common.stepNav.previousAria": "Vorige stap",
+  "common.stepNav.nextAria": "Volgende stap",
+  "common.sidebar.toggleAria": "Navigatiemenu schakelen",
+  "common.sidebar.stepsAria": "Workshopstappen",
+  "common.footer.html": "DevAI Day Workshop &bull; <a href=\"https://github.com\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> &bull; Met \u2764\ufe0f gemaakt voor ontwikkelaars"
+}

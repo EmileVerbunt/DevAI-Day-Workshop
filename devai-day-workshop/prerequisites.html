@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="prerequisites.meta.title">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Prerequisites for the DevAI Day Workshop — everything attendees should install and set up in advance for a smooth day, with core and per-path requirements.">
+  <meta name="description" content="Prerequisites for the DevAI Day Workshop — everything attendees should install and set up in advance for a smooth day, with core and per-path requirements." data-i18n-attr="content:prerequisites.meta.description">
   <meta name="theme-color" content="#6C21D9">
   <title>Prerequisites - DevAI Day Workshop</title>
   <link rel="stylesheet" href="css/styles.css">
@@ -14,7 +14,7 @@
     body { font-family: 'Inter', var(--font-family); }
   </style>
 </head>
-<body>
+<body data-i18n-page="prerequisites">
   <!-- Header -->
   <header class="site-header" role="banner">
     <div class="header-brand">
@@ -23,20 +23,31 @@
       </svg>
       <a href="../index.html" class="header-title">DevAI Day Workshop</a>
     </div>
-    <nav class="header-nav" aria-label="Main navigation">
-      <a href="../index.html" class="header-nav-link">Home</a>
-      <a href="prerequisites.html" class="header-nav-link active">Prerequisites</a>
-      <a href="start-coding.html" class="header-nav-link">Start Coding with AI</a>
-      <a href="pro-features.html" class="header-nav-link">Copilot Pro Features</a>
-      <a href="extended-capabilities.html" class="header-nav-link">Extended Capabilities</a>
-      <a href="spec-driven-development.html" class="header-nav-link">Spec-Driven Development</a>
-      <a href="agentic-workflows.html" class="header-nav-link">Agentic Workflows</a>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+    <nav class="header-nav" aria-label="Main navigation" data-i18n-attr="aria-label:common.nav.ariaMain">
+      <a href="../index.html" class="header-nav-link" data-i18n="common.nav.home">Home</a>
+      <a href="prerequisites.html" class="header-nav-link active" data-i18n="common.nav.prerequisites">Prerequisites</a>
+      <a href="start-coding.html" class="header-nav-link" data-i18n="common.nav.startCoding">Start Coding with AI</a>
+      <a href="pro-features.html" class="header-nav-link" data-i18n="common.nav.proFeatures">Copilot Pro Features</a>
+      <a href="extended-capabilities.html" class="header-nav-link" data-i18n="common.nav.extendedCapabilities">Extended Capabilities</a>
+      <a href="spec-driven-development.html" class="header-nav-link" data-i18n="common.nav.specDriven">Spec-Driven Development</a>
+      <a href="agentic-workflows.html" class="header-nav-link" data-i18n="common.nav.agenticWorkflows">Agentic Workflows</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" data-i18n-attr="aria-label:common.theme.toggleAria">
         <svg class="theme-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span class="theme-toggle-text">Dark</span>
       </button>
+      <div class="lang-switcher" data-lang-switcher>
+        <svg class="lang-switcher-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <select class="lang-select" aria-label="Select language" data-i18n-attr="aria-label:common.lang.selectAria">
+          <option value="en">EN</option>
+          <option value="nl">NL</option>
+        </select>
+      </div>
     </nav>
   </header>
 
@@ -45,8 +56,8 @@
     <!-- Hero Section -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <h1 id="hero-title" class="hero-title">Workshop Prerequisites</h1>
-        <p class="hero-subtitle">
+        <h1 id="hero-title" class="hero-title" data-i18n="prerequisites.hero.title">Workshop Prerequisites</h1>
+        <p class="hero-subtitle" data-i18n-html="prerequisites.hero.subtitle">
           Please complete this setup <strong>before</strong> the workshop so we can spend the
           day building, not installing. Start with the core requirements, then check the
           extras for the paths you plan to follow.
@@ -58,23 +69,23 @@
     <section class="section" aria-labelledby="core-title">
       <div class="container">
         <div class="section-header">
-          <h2 id="core-title" class="section-title">Core Prerequisites (everyone)</h2>
-          <p class="section-subtitle">Required for every path — set these up first</p>
+          <h2 id="core-title" class="section-title" data-i18n="prerequisites.core.title">Core Prerequisites (everyone)</h2>
+          <p class="section-subtitle" data-i18n="prerequisites.core.subtitle">Required for every path — set these up first</p>
         </div>
 
-        <ul class="prerequisites-list" aria-label="Core prerequisites">
+        <ul class="prerequisites-list" aria-label="Core prerequisites" data-i18n-attr="aria-label:prerequisites.core.listAria">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
               <circle cx="12" cy="7" r="4"/>
             </svg>
-            <span><strong>GitHub account</strong> — created and signed in. <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer">Sign up</a></span>
+            <span data-i18n-html="prerequisites.core.githubAccount.html"><strong>GitHub account</strong> — created and signed in. <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer">Sign up</a></span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
             </svg>
-            <span><strong>GitHub Copilot license</strong> — Individual, Business, or Enterprise, activated on your account. <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">Check plans &amp; access</a></span>
+            <span data-i18n-html="prerequisites.core.copilotLicense.html"><strong>GitHub Copilot license</strong> — Individual, Business, or Enterprise, activated on your account. <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">Check plans &amp; access</a></span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -82,14 +93,14 @@
               <line x1="8" y1="21" x2="16" y2="21"/>
               <line x1="12" y1="17" x2="12" y2="21"/>
             </svg>
-            <span><strong>Visual Studio Code</strong> (latest version) installed. <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Download VS Code</a></span>
+            <span data-i18n-html="prerequisites.core.vscode.html"><strong>Visual Studio Code</strong> (latest version) installed. <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Download VS Code</a></span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
             </svg>
-            <span><strong>Copilot extensions for VS Code</strong> — install <strong>GitHub Copilot</strong> and <strong>GitHub Copilot Chat</strong>, then sign in with your GitHub account. <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noopener noreferrer">Get the extension</a></span>
+            <span data-i18n-html="prerequisites.core.copilotExtensions.html"><strong>Copilot extensions for VS Code</strong> — install <strong>GitHub Copilot</strong> and <strong>GitHub Copilot Chat</strong>, then sign in with your GitHub account. <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noopener noreferrer">Get the extension</a></span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -98,7 +109,7 @@
               <circle cx="6" cy="18" r="3"/>
               <path d="M18 9a9 9 0 01-9 9"/>
             </svg>
-            <span><strong>Git</strong> installed and configured. <a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreferrer">Install Git</a></span>
+            <span data-i18n-html="prerequisites.core.git.html"><strong>Git</strong> installed and configured. <a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreferrer">Install Git</a></span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -106,7 +117,7 @@
               <line x1="2" y1="12" x2="22" y2="12"/>
               <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
             </svg>
-            <span><strong>A modern browser</strong> and a <strong>stable internet connection</strong> (some exercises run on github.com and in the cloud).</span>
+            <span data-i18n-html="prerequisites.core.browser.html"><strong>A modern browser</strong> and a <strong>stable internet connection</strong> (some exercises run on github.com and in the cloud).</span>
           </li>
         </ul>
 
@@ -117,8 +128,8 @@
             <line x1="12" y1="8" x2="12.01" y2="8"/>
           </svg>
           <div class="info-box-content">
-            <strong>Confirm Copilot works before the day</strong>
-            <p>Open VS Code, create a file, and check that you get inline suggestions and that Copilot Chat responds. If not, make sure you're signed in and your Copilot subscription is active.</p>
+            <strong data-i18n="prerequisites.core.confirmTitle">Confirm Copilot works before the day</strong>
+            <p data-i18n="prerequisites.core.confirmText">Open VS Code, create a file, and check that you get inline suggestions and that Copilot Chat responds. If not, make sure you're signed in and your Copilot subscription is active.</p>
           </div>
         </div>
       </div>
@@ -128,37 +139,37 @@
     <section class="section" aria-labelledby="access-title" style="background-color: var(--color-bg-secondary);">
       <div class="container">
         <div class="section-header">
-          <h2 id="access-title" class="section-title">Accounts &amp; Access</h2>
-          <p class="section-subtitle">Permissions to sort out ahead of time (especially on managed/enterprise accounts)</p>
+          <h2 id="access-title" class="section-title" data-i18n="prerequisites.access.title">Accounts &amp; Access</h2>
+          <p class="section-subtitle" data-i18n="prerequisites.access.subtitle">Permissions to sort out ahead of time (especially on managed/enterprise accounts)</p>
         </div>
-        <ul class="prerequisites-list" aria-label="Accounts and access">
+        <ul class="prerequisites-list" aria-label="Accounts and access" data-i18n-attr="aria-label:prerequisites.access.listAria">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 12l2 2 4-4"/>
               <circle cx="12" cy="12" r="10"/>
             </svg>
-            <span><strong>Copilot enabled</strong> for your account by your organization (if you use a Business/Enterprise plan).</span>
+            <span data-i18n-html="prerequisites.access.copilotEnabled.html"><strong>Copilot enabled</strong> for your account by your organization (if you use a Business/Enterprise plan).</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 12l2 2 4-4"/>
               <circle cx="12" cy="12" r="10"/>
             </svg>
-            <span><strong>Ability to create repositories</strong> and <strong>fork</strong> public repositories under your account.</span>
+            <span data-i18n-html="prerequisites.access.repositories.html"><strong>Ability to create repositories</strong> and <strong>fork</strong> public repositories under your account.</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 12l2 2 4-4"/>
               <circle cx="12" cy="12" r="10"/>
             </svg>
-            <span><strong>Copilot coding agent</strong> available (needed for Path 2). Availability depends on your Copilot plan/admin settings.</span>
+            <span data-i18n-html="prerequisites.access.codingAgent.html"><strong>Copilot coding agent</strong> available (needed for Path 2). Availability depends on your Copilot plan/admin settings.</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 12l2 2 4-4"/>
               <circle cx="12" cy="12" r="10"/>
             </svg>
-            <span><strong>GitHub Actions enabled</strong> on a repo you control, with permission to add workflows (needed for Path 5).</span>
+            <span data-i18n-html="prerequisites.access.actions.html"><strong>GitHub Actions enabled</strong> on a repo you control, with permission to add workflows (needed for Path 5).</span>
           </li>
         </ul>
       </div>
@@ -168,67 +179,67 @@
     <section class="section" aria-labelledby="perpath-title">
       <div class="container">
         <div class="section-header">
-          <h2 id="perpath-title" class="section-title">Per-Path Requirements</h2>
-          <p class="section-subtitle">Extras to install only for the paths you'll follow (in addition to the core list)</p>
+          <h2 id="perpath-title" class="section-title" data-i18n="prerequisites.perPath.title">Per-Path Requirements</h2>
+          <p class="section-subtitle" data-i18n="prerequisites.perPath.subtitle">Extras to install only for the paths you'll follow (in addition to the core list)</p>
         </div>
 
         <div class="card-grid">
           <!-- Path 1 -->
           <div class="card">
-            <h3 class="card-title">Path 1 — Start Coding with AI</h3>
-            <p class="card-description">IDE-based exercises in VS Code, ending with building a small app.</p>
+            <h3 class="card-title" data-i18n="prerequisites.path1.title">Path 1 — Start Coding with AI</h3>
+            <p class="card-description" data-i18n="prerequisites.path1.description">IDE-based exercises in VS Code, ending with building a small app.</p>
             <ul>
-              <li>VS Code with <strong>GitHub Copilot</strong> + <strong>Copilot Chat</strong>, signed in (core).</li>
-              <li>Ability to <strong>fork</strong> the sample repo and <strong>clone</strong> it with Git.</li>
-              <li>For the end-to-end app: a runtime for your chosen stack — <strong>Python (Flask)</strong>, <strong>Node.js (Express)</strong>, or <strong>Java (Spring Boot)</strong>.</li>
-              <li><em>Optional:</em> use <strong>GitHub Codespaces</strong> instead of a local setup.</li>
+              <li data-i18n-html="prerequisites.path1.item1.html">VS Code with <strong>GitHub Copilot</strong> + <strong>Copilot Chat</strong>, signed in (core).</li>
+              <li data-i18n-html="prerequisites.path1.item2.html">Ability to <strong>fork</strong> the sample repo and <strong>clone</strong> it with Git.</li>
+              <li data-i18n-html="prerequisites.path1.item3.html">For the end-to-end app: a runtime for your chosen stack — <strong>Python (Flask)</strong>, <strong>Node.js (Express)</strong>, or <strong>Java (Spring Boot)</strong>.</li>
+              <li data-i18n-html="prerequisites.path1.item4.html"><em>Optional:</em> use <strong>GitHub Codespaces</strong> instead of a local setup.</li>
             </ul>
           </div>
 
           <!-- Path 2 -->
           <div class="card">
-            <h3 class="card-title">Path 2 — Copilot Pro Features</h3>
-            <p class="card-description">Mostly browser-based, on github.com.</p>
+            <h3 class="card-title" data-i18n="prerequisites.path2.title">Path 2 — Copilot Pro Features</h3>
+            <p class="card-description" data-i18n="prerequisites.path2.description">Mostly browser-based, on github.com.</p>
             <ul>
-              <li>Access to the <strong>Copilot coding agent</strong> (create repos, assign issues to Copilot).</li>
-              <li>Permission to configure repo <strong>rulesets</strong> / enable <strong>Copilot code review</strong>.</li>
-              <li>Access to <strong>Copilot Spaces</strong>.</li>
-              <li>No local tooling strictly required beyond a browser and your GitHub account.</li>
+              <li data-i18n-html="prerequisites.path2.item1.html">Access to the <strong>Copilot coding agent</strong> (create repos, assign issues to Copilot).</li>
+              <li data-i18n-html="prerequisites.path2.item2.html">Permission to configure repo <strong>rulesets</strong> / enable <strong>Copilot code review</strong>.</li>
+              <li data-i18n-html="prerequisites.path2.item3.html">Access to <strong>Copilot Spaces</strong>.</li>
+              <li data-i18n="prerequisites.path2.item4">No local tooling strictly required beyond a browser and your GitHub account.</li>
             </ul>
           </div>
 
           <!-- Path 3 -->
           <div class="card">
-            <h3 class="card-title">Path 3 — Extended Capabilities</h3>
-            <p class="card-description">CLI, SDK, Agent Skills, Sub-Agents, and Memory.</p>
+            <h3 class="card-title" data-i18n="prerequisites.path3.title">Path 3 — Extended Capabilities</h3>
+            <p class="card-description" data-i18n="prerequisites.path3.description">CLI, SDK, Agent Skills, Sub-Agents, and Memory.</p>
             <ul>
-              <li><strong>GitHub CLI (<code>gh</code>) v2.x</strong>, installed and authenticated. <a href="https://cli.github.com/" target="_blank" rel="noopener noreferrer">cli.github.com</a></li>
-              <li>A supported shell — <strong>Bash, Zsh, Fish, or PowerShell</strong>.</li>
-              <li>For the SDK exercise: <strong>Node.js 18+ or Python 3.9+</strong>, plus <strong>ngrok</strong> (or similar) for HTTPS tunneling.</li>
-              <li>VS Code + Copilot Chat with <strong>agent mode</strong> for Skills &amp; Sub-Agents.</li>
+              <li data-i18n-html="prerequisites.path3.item1.html"><strong>GitHub CLI (<code>gh</code>) v2.x</strong>, installed and authenticated. <a href="https://cli.github.com/" target="_blank" rel="noopener noreferrer">cli.github.com</a></li>
+              <li data-i18n-html="prerequisites.path3.item2.html">A supported shell — <strong>Bash, Zsh, Fish, or PowerShell</strong>.</li>
+              <li data-i18n-html="prerequisites.path3.item3.html">For the SDK exercise: <strong>Node.js 18+ or Python 3.9+</strong>, plus <strong>ngrok</strong> (or similar) for HTTPS tunneling.</li>
+              <li data-i18n-html="prerequisites.path3.item4.html">VS Code + Copilot Chat with <strong>agent mode</strong> for Skills &amp; Sub-Agents.</li>
             </ul>
           </div>
 
           <!-- Path 4 -->
           <div class="card">
-            <h3 class="card-title">Path 4 — Spec-Driven Development</h3>
-            <p class="card-description">Specs first, then GitHub Spec Kit.</p>
+            <h3 class="card-title" data-i18n="prerequisites.path4.title">Path 4 — Spec-Driven Development</h3>
+            <p class="card-description" data-i18n="prerequisites.path4.description">Specs first, then GitHub Spec Kit.</p>
             <ul>
-              <li><strong>Python 3.11+</strong> and <strong><a href="https://docs.astral.sh/uv/" target="_blank" rel="noopener noreferrer">uv</a></strong> installed.</li>
-              <li>Git and a <strong>Copilot-enabled agent</strong> (VS Code or Copilot CLI).</li>
-              <li>The <strong><code>specify</code> CLI</strong> — installed together during the session (no need to pre-install).</li>
+              <li data-i18n-html="prerequisites.path4.item1.html"><strong>Python 3.11+</strong> and <strong><a href="https://docs.astral.sh/uv/" target="_blank" rel="noopener noreferrer">uv</a></strong> installed.</li>
+              <li data-i18n-html="prerequisites.path4.item2.html">Git and a <strong>Copilot-enabled agent</strong> (VS Code or Copilot CLI).</li>
+              <li data-i18n-html="prerequisites.path4.item3.html">The <strong><code>specify</code> CLI</strong> — installed together during the session (no need to pre-install).</li>
             </ul>
           </div>
 
           <!-- Path 5 -->
           <div class="card">
-            <h3 class="card-title">Path 5 — Agentic Workflows</h3>
-            <p class="card-description">Natural-language workflows with <code>gh-aw</code>.</p>
+            <h3 class="card-title" data-i18n="prerequisites.path5.title">Path 5 — Agentic Workflows</h3>
+            <p class="card-description" data-i18n-html="prerequisites.path5.description">Natural-language workflows with <code>gh-aw</code>.</p>
             <ul>
-              <li><strong>GitHub CLI (<code>gh</code>)</strong>, installed and authenticated.</li>
-              <li>A <strong>GitHub repository with Actions enabled</strong> and permission to add workflows.</li>
-              <li>A coding agent / model available to your repo (e.g., GitHub Copilot).</li>
-              <li>The <strong><code>gh-aw</code> extension</strong> — installed together during the session.</li>
+              <li data-i18n-html="prerequisites.path5.item1.html"><strong>GitHub CLI (<code>gh</code>)</strong>, installed and authenticated.</li>
+              <li data-i18n-html="prerequisites.path5.item2.html">A <strong>GitHub repository with Actions enabled</strong> and permission to add workflows.</li>
+              <li data-i18n="prerequisites.path5.item3">A coding agent / model available to your repo (e.g., GitHub Copilot).</li>
+              <li data-i18n-html="prerequisites.path5.item4.html">The <strong><code>gh-aw</code> extension</strong> — installed together during the session.</li>
             </ul>
           </div>
         </div>
@@ -239,11 +250,11 @@
     <section class="section" aria-labelledby="verify-title" style="background-color: var(--color-bg-secondary);">
       <div class="container">
         <div class="section-header">
-          <h2 id="verify-title" class="section-title">Verify Your Setup</h2>
-          <p class="section-subtitle">Run these the day before — each should succeed without errors</p>
+          <h2 id="verify-title" class="section-title" data-i18n="prerequisites.verify.title">Verify Your Setup</h2>
+          <p class="section-subtitle" data-i18n="prerequisites.verify.subtitle">Run these the day before — each should succeed without errors</p>
         </div>
 
-        <p>Open a terminal and check the tools you'll need. Not every command applies to every path — match them to the paths you're attending.</p>
+        <p data-i18n="prerequisites.verify.intro">Open a terminal and check the tools you'll need. Not every command applies to every path — match them to the paths you're attending.</p>
         <pre><code># Core / Paths 3 &amp; 5 — GitHub CLI signed in
 gh --version
 gh auth status
@@ -268,8 +279,8 @@ gh extension list</code></pre>
             <line x1="12" y1="17" x2="12.01" y2="17"/>
           </svg>
           <div class="info-box-content">
-            <strong>If <code>gh auth status</code> shows you're not logged in</strong>
-            <p>Run <code>gh auth login</code> and follow the prompts. You should end up logged in to github.com.</p>
+            <strong data-i18n-html="prerequisites.verify.authWarningTitle.html">If <code>gh auth status</code> shows you're not logged in</strong>
+            <p data-i18n-html="prerequisites.verify.authWarningText.html">Run <code>gh auth login</code> and follow the prompts. You should end up logged in to github.com.</p>
           </div>
         </div>
       </div>
@@ -279,43 +290,43 @@ gh extension list</code></pre>
     <section class="section" aria-labelledby="tips-title">
       <div class="container">
         <div class="section-header">
-          <h2 id="tips-title" class="section-title">Day-of Tips</h2>
-          <p class="section-subtitle">Small things that prevent big delays</p>
+          <h2 id="tips-title" class="section-title" data-i18n="prerequisites.tips.title">Day-of Tips</h2>
+          <p class="section-subtitle" data-i18n="prerequisites.tips.subtitle">Small things that prevent big delays</p>
         </div>
-        <ul class="goals-list" aria-label="Day-of tips">
+        <ul class="goals-list" aria-label="Day-of tips" data-i18n-attr="aria-label:prerequisites.tips.listAria">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke-linecap="round" stroke-linejoin="round"/>
               <polyline points="22 4 12 14.01 9 11.01" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>Sign in to <strong>github.com</strong>, VS Code, and the <strong>GitHub CLI</strong> ahead of time so you're not fighting auth prompts during exercises.</span>
+            <span data-i18n-html="prerequisites.tips.signIn.html">Sign in to <strong>github.com</strong>, VS Code, and the <strong>GitHub CLI</strong> ahead of time so you're not fighting auth prompts during exercises.</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke-linecap="round" stroke-linejoin="round"/>
               <polyline points="22 4 12 14.01 9 11.01" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>Update VS Code and the Copilot extensions to the <strong>latest version</strong> for the smoothest experience.</span>
+            <span data-i18n-html="prerequisites.tips.update.html">Update VS Code and the Copilot extensions to the <strong>latest version</strong> for the smoothest experience.</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke-linecap="round" stroke-linejoin="round"/>
               <polyline points="22 4 12 14.01 9 11.01" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>On a <strong>corporate network</strong>? Confirm access to github.com, the VS Code Marketplace, and npm/PyPI, or have a backup connection ready.</span>
+            <span data-i18n-html="prerequisites.tips.network.html">On a <strong>corporate network</strong>? Confirm access to github.com, the VS Code Marketplace, and npm/PyPI, or have a backup connection ready.</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke-linecap="round" stroke-linejoin="round"/>
               <polyline points="22 4 12 14.01 9 11.01" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>Short on time? Just complete the <strong>Core Prerequisites</strong> — the per-path extras can be installed during the session if needed.</span>
+            <span data-i18n-html="prerequisites.tips.shortOnTime.html">Short on time? Just complete the <strong>Core Prerequisites</strong> — the per-path extras can be installed during the session if needed.</span>
           </li>
         </ul>
 
         <div style="text-align:center; margin-top:2rem;">
           <a href="../index.html" class="button button-primary" style="display:inline-flex;align-items:center;gap:0.5rem;">
-            Back to Workshop Home
+            <span data-i18n="prerequisites.cta.backHome">Back to Workshop Home</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"/>
               <polyline points="12 5 19 12 12 19"/>
@@ -328,7 +339,7 @@ gh extension list</code></pre>
     <!-- Footer -->
     <footer class="site-footer" role="contentinfo">
       <div class="container">
-        <p>
+        <p data-i18n-html="common.footer.html">
           DevAI Day Workshop &bull;
           <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
           Built with ❤️ for developers
@@ -337,6 +348,8 @@ gh extension list</code></pre>
     </footer>
   </main>
 
+  <script src="i18n/bundles/prerequisites.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

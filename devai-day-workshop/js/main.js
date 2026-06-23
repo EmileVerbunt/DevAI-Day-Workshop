@@ -42,19 +42,29 @@
       if (!themeToggle) return;
       const icon = themeToggle.querySelector('.theme-toggle-icon');
       const text = themeToggle.querySelector('.theme-toggle-text');
-      
+
+      const t = (key, fallback) =>
+        (window.I18n && typeof window.I18n.translate === 'function' && window.I18n.translate(key)) || fallback;
+
       if (theme === 'dark') {
         if (icon) icon.innerHTML = `<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
-        if (text) text.textContent = 'Light';
+        if (text) text.textContent = t('common.theme.light', 'Light');
       } else {
         if (icon) icon.innerHTML = `<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
-        if (text) text.textContent = 'Dark';
+        if (text) text.textContent = t('common.theme.dark', 'Dark');
       }
     },
 
     bindEvents() {
       if (themeToggle) {
         themeToggle.addEventListener('click', () => this.toggle());
+      }
+      // Re-render the toggle label when the language changes.
+      if (window.I18n && typeof window.I18n.onChange === 'function') {
+        window.I18n.onChange(() => {
+          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+          this.updateToggleButton(currentTheme);
+        });
       }
     }
   };
@@ -177,9 +187,13 @@
       // Update progress bar
       this.updateProgress();
 
-      // Scroll to top of content
+      // Scroll to top of the page. The window/document is the actual scroll
+      // container (.workshop-content is not scrollable), so scroll the window.
+      window.scrollTo(0, 0);
+
+      // Fallback: also reset any scrollable content container.
       const content = document.querySelector('.workshop-content');
-      if (content) {
+      if (content && typeof content.scrollTo === 'function') {
         content.scrollTo(0, 0);
       }
 
