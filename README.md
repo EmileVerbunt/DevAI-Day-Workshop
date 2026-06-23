@@ -82,9 +82,13 @@ Build AI-powered automation with GitHub Agentic Workflows (`gh-aw`) — natural-
 
 ## Prerequisites
 
+A core setup applies to every path (GitHub account, an activated **GitHub Copilot license**, **VS Code** with the GitHub Copilot and Copilot Chat extensions, and **Git**). Individual paths add their own extras (e.g., the GitHub CLI, Node.js/Python, `uv`, or a repo with Actions enabled).
+
 - **Visual Studio Code** installed on your machine
 - **GitHub Copilot license** activated
 - **GitHub account** set up and ready to use
+
+> 📋 Share the **[full prerequisites page](devai-day-workshop/prerequisites.html)** with attendees in advance — it lists the core requirements, per-path specifics, and a "verify your setup" command checklist.
 
 ## Getting Started
 
@@ -122,6 +126,7 @@ DevAI-Day-Workshop/
 ├── index.html                      # Main landing page
 ├── README.md                       # This file
 └── devai-day-workshop/
+    ├── prerequisites.html          # Attendee prerequisites (core + per-path)
     ├── start-coding.html           # Path 1: Start Coding with AI
     ├── pro-features.html           # Path 2: Copilot Pro Features
     ├── extended-capabilities.html  # Path 3: Extended Copilot Capabilities
