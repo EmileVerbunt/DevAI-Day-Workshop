@@ -58,6 +58,28 @@ Go beyond the IDE and explore the broader Copilot ecosystem — CLI, SDK, agent 
 4. Sub-Agents
 5. Copilot Memory
 
+### Path 4: Spec-Driven Development
+
+Write specs first, then let Copilot plan, break down tasks, and implement. An advanced track for experienced developers, blending spec-driven concepts with GitHub Spec Kit.
+
+**Topics Covered:**
+1. What is Spec-Driven Development?
+2. Writing Specs with Copilot
+3. Introducing GitHub Spec Kit
+4. The Spec Kit Workflow (`/speckit.specify`, `/speckit.plan`, `/speckit.tasks`, `/speckit.implement`)
+5. Hands-on: Build a Feature Spec-First
+
+### Path 5: Agentic Workflows
+
+Build AI-powered automation with GitHub Agentic Workflows (`gh-aw`) — natural-language markdown compiled into hardened GitHub Actions. An advanced, hands-on track.
+
+**Topics Covered:**
+1. What are Agentic Workflows?
+2. Installing gh-aw & Workflow Anatomy
+3. Triggers, Permissions & Safe-Outputs
+4. Compiling & Running
+5. Hands-on: Build an Issue-Triage Agent
+
 ## Prerequisites
 
 - **Visual Studio Code** installed on your machine
@@ -103,6 +125,8 @@ DevAI-Day-Workshop/
     ├── start-coding.html           # Path 1: Start Coding with AI
     ├── pro-features.html           # Path 2: Copilot Pro Features
     ├── extended-capabilities.html  # Path 3: Extended Copilot Capabilities
+    ├── spec-driven-development.html # Path 4: Spec-Driven Development
+    ├── agentic-workflows.html      # Path 5: Agentic Workflows
     ├── codelab.json                # Workshop metadata
     ├── css/
     │   └── styles.css              # Stylesheet

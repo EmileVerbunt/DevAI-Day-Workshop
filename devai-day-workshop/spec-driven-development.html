@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Spec-Driven Development with GitHub Copilot — write specs first, then let AI plan, break down tasks, and implement using GitHub Spec Kit.">
+  <meta name="theme-color" content="#6C21D9">
+  <title>Spec-Driven Development - DevAI Day Workshop</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', var(--font-family); }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-brand">
+      <svg class="header-logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+      </svg>
+      <a href="../index.html" class="header-title">DevAI Day Workshop</a>
+    </div>
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="../index.html" class="header-nav-link">Home</a>
+      <a href="start-coding.html" class="header-nav-link">Start Coding with AI</a>
+      <a href="pro-features.html" class="header-nav-link">Copilot Pro Features</a>
+      <a href="extended-capabilities.html" class="header-nav-link">Extended Capabilities</a>
+      <a href="spec-driven-development.html" class="header-nav-link active">Spec-Driven Development</a>
+      <a href="agentic-workflows.html" class="header-nav-link">Agentic Workflows</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="theme-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="theme-toggle-text">Dark</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Workshop Layout -->
+  <div class="workshop-layout">
+    <!-- Sidebar Navigation -->
+    <aside id="workshop-sidebar" class="workshop-sidebar" role="navigation" aria-label="Workshop steps">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+          Back to Home
+        </a>
+        <h2 class="sidebar-title">Spec-Driven Development</h2>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ol class="sidebar-nav-list">
+          <li class="sidebar-nav-item">
+            <a href="#step-1" class="sidebar-nav-link active">
+              <span class="sidebar-nav-number">1</span>
+              <span class="sidebar-nav-text">What is Spec-Driven Development?</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#step-2" class="sidebar-nav-link">
+              <span class="sidebar-nav-number">2</span>
+              <span class="sidebar-nav-text">Writing Specs with Copilot</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#step-3" class="sidebar-nav-link">
+              <span class="sidebar-nav-number">3</span>
+              <span class="sidebar-nav-text">Introducing GitHub Spec Kit</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#step-4" class="sidebar-nav-link">
+              <span class="sidebar-nav-number">4</span>
+              <span class="sidebar-nav-text">The Spec Kit Workflow</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#step-5" class="sidebar-nav-link">
+              <span class="sidebar-nav-number">5</span>
+              <span class="sidebar-nav-text">Hands-on: Build a Feature Spec-First</span>
+            </a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="progress-container">
+        <div class="progress-label">
+          <span>Progress</span>
+          <span><span class="progress-current">1</span> / <span class="progress-total">5</span></span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 20%;"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sidebar overlay for mobile -->
+    <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <main class="workshop-content" role="main">
+      <div class="workshop-content-inner">
+
+        <!-- Step 1: What is Spec-Driven Development? -->
+        <section id="step-1" class="step-section active" aria-labelledby="step-1-title">
+          <header class="step-header">
+            <span class="step-number">Step 1 of 5</span>
+            <h1 id="step-1-title" class="step-title">What is Spec-Driven Development?</h1>
+            <p class="step-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              15 minutes
+            </p>
+          </header>
+
+          <p>Spec-Driven Development (SDD) flips the usual AI coding workflow. Instead of prompting an agent to "just build it" and hoping the result matches your intent, you first capture <strong>what</strong> you want and <strong>why</strong> in a clear specification — then let Copilot turn that spec into a plan, tasks, and code.</p>
+
+          <h2>Intent vs. Implementation</h2>
+          <p>Traditional prompting mixes intent and implementation together in a single throwaway message. Spec-driven development separates them:</p>
+          <ul>
+            <li><strong>Intent (the spec)</strong> — The durable description of the problem, the desired behavior, constraints, and acceptance criteria. It is reviewed, versioned, and shared.</li>
+            <li><strong>Implementation (the code)</strong> — A consequence of the spec, generated by the agent and regenerated when the spec changes.</li>
+          </ul>
+          <p>When the spec is the source of truth, the code becomes easier to regenerate, review, and reason about — and the AI has a stable target to aim at.</p>
+
+          <h2>Why Specs Matter for AI Coding</h2>
+          <ul>
+            <li><strong>Better results</strong> — Agents perform dramatically better with explicit requirements than with vague one-liners.</li>
+            <li><strong>Shared understanding</strong> — A spec is reviewable by humans before a single line of code is written.</li>
+            <li><strong>Reproducibility</strong> — The same spec can drive consistent regeneration across models and sessions.</li>
+            <li><strong>Guardrails</strong> — Constraints and acceptance criteria keep the agent from wandering off scope.</li>
+          </ul>
+
+          <div class="info-box note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <div class="info-box-content">
+              <strong>Mental model</strong>
+              <p>Think of the spec as the <em>contract</em> and the agent as the <em>contractor</em>. You refine the contract until it is unambiguous; the contractor builds to it.</p>
+            </div>
+          </div>
+
+          <h2>When to Use SDD</h2>
+          <ul>
+            <li><strong>Use it</strong> for new features, multi-file changes, and anything you'll need to review, hand off, or revisit.</li>
+            <li><strong>Skip it</strong> for trivial edits, quick experiments, or single-line fixes where the overhead isn't worth it.</li>
+          </ul>
+
+          <h2>The SDD Loop</h2>
+          <ol>
+            <li><strong>Specify</strong> — Describe what and why (not how).</li>
+            <li><strong>Plan</strong> — Let Copilot propose a technical approach.</li>
+            <li><strong>Break down</strong> — Decompose the plan into concrete, ordered tasks.</li>
+            <li><strong>Implement</strong> — Execute the tasks, verifying against acceptance criteria.</li>
+          </ol>
+          <p>Over the next steps you'll practice this loop first with plain Copilot, then with <strong>GitHub Spec Kit</strong> — a toolkit that formalizes each stage with slash commands.</p>
+
+          <nav class="step-navigation" aria-label="Step navigation">
+            <button class="step-nav-button step-nav-prev" disabled aria-label="Previous step">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+              </svg>
+              Previous
+            </button>
+            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
+              Next
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </nav>
+        </section>
+
+        <!-- Step 2: Writing Specs with Copilot -->
+        <section id="step-2" class="step-section" aria-labelledby="step-2-title">
+          <header class="step-header">
+            <span class="step-number">Step 2 of 5</span>
+            <h1 id="step-2-title" class="step-title">Writing Specs with Copilot</h1>
+            <p class="step-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              20 minutes
+            </p>
+          </header>
+
+          <p>Before reaching for dedicated tooling, you can practice spec-driven development with nothing more than a markdown file and GitHub Copilot. The goal: a spec precise enough that Copilot can implement it without guessing.</p>
+
+          <h2>Anatomy of a Good Spec</h2>
+          <p>A useful feature spec is structured and testable. A simple template:</p>
+          <pre><code># Feature: Shopping Cart Discount Codes
+
+## Problem
+Customers can't apply promo codes at checkout, so marketing
+campaigns can't offer time-limited discounts.
+
+## Goals
+- Let a customer enter a discount code in the cart
+- Validate the code server-side and apply the discount
+- Show the updated total before checkout
+
+## Non-Goals
+- Stacking multiple codes
+- Per-user usage limits (future work)
+
+## Behavior
+- A valid percentage code reduces the subtotal by its percentage
+- An expired or unknown code shows an inline error and no discount
+- The applied discount persists until the cart is emptied
+
+## Acceptance Criteria
+- [ ] Entering `SAVE10` reduces a $100 subtotal to $90
+- [ ] Entering `EXPIRED` shows "This code is no longer valid"
+- [ ] Removing the code restores the original total</code></pre>
+
+          <div class="info-box note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <div class="info-box-content">
+              <strong>Describe what, not how</strong>
+              <p>Keep specs focused on behavior and outcomes. Leave the implementation details (frameworks, file layout, algorithms) to the planning step so the agent can choose the best fit for your codebase.</p>
+            </div>
+          </div>
+
+          <h2>Use Plan Mode to Turn a Spec into a Plan</h2>
+          <p>Copilot's <strong>Plan Mode</strong> reads your spec and the surrounding codebase, then proposes an implementation plan for you to review <em>before</em> any code is written. This is the bridge between intent and implementation.</p>
+          <ol>
+            <li>Open your repository in VS Code with the spec file visible.</li>
+            <li>Start a Copilot Chat session in Plan Mode and reference the spec: <code>Plan the implementation of #file:cart-discounts.md</code></li>
+            <li>Review the proposed steps, push back on anything that doesn't fit, and iterate until the plan matches your intent.</li>
+          </ol>
+
+          <h2>Persist Conventions with Instructions Files</h2>
+          <p>Specs describe a single feature; <strong>instructions files</strong> describe how <em>all</em> work in the repo should be done. Together they give the agent both the "what" and the "house rules".</p>
+          <pre><code># .github/copilot-instructions.md
+
+- Use TypeScript with strict mode for all new code.
+- Co-locate unit tests next to the file under test as `*.test.ts`.
+- Validate all external input at the boundary; never trust client data.
+- Prefer pure functions; keep side effects in clearly named modules.</code></pre>
+          <p>You can also scope guidance with path-specific <code>.instructions.md</code> files so different parts of the codebase follow different rules.</p>
+
+          <h2>Exercise: Write and Plan a Spec</h2>
+          <ol>
+            <li>Create <code>specs/feature.md</code> using the template above for a small feature in a sample repo.</li>
+            <li>Add a <code>.github/copilot-instructions.md</code> with 3–4 conventions for the repo.</li>
+            <li>Ask Copilot in Plan Mode to plan the implementation from your spec.</li>
+            <li>Refine the spec until the generated plan is correct — notice how clearer specs produce better plans.</li>
+          </ol>
+
+          <nav class="step-navigation" aria-label="Step navigation">
+            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+              </svg>
+              Previous
+            </button>
+            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
+              Next
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </nav>
+        </section>
+
+        <!-- Step 3: Introducing GitHub Spec Kit -->
+        <section id="step-3" class="step-section" aria-labelledby="step-3-title">
+          <header class="step-header">
+            <span class="step-number">Step 3 of 5</span>
+            <h1 id="step-3-title" class="step-title">Introducing GitHub Spec Kit</h1>
+            <p class="step-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              20 minutes
+            </p>
+          </header>
+
+          <p><a href="https://github.com/github/spec-kit" target="_blank" rel="noopener noreferrer">GitHub Spec Kit</a> is an open-source toolkit that turns the spec-driven loop into a repeatable workflow. It adds a set of slash commands to your AI coding agent and a project structure that keeps specs, plans, and tasks organized.</p>
+
+          <h2>What Spec Kit Gives You</h2>
+          <ul>
+            <li><strong>A consistent structure</strong> — Dedicated locations for your project constitution, specs, plans, and task lists.</li>
+            <li><strong>Slash commands</strong> — <code>/speckit.constitution</code>, <code>/speckit.specify</code>, <code>/speckit.plan</code>, <code>/speckit.tasks</code>, and <code>/speckit.implement</code> that drive each stage of the loop.</li>
+            <li><strong>Agent-agnostic</strong> — Works with GitHub Copilot and 30+ other coding agents.</li>
+          </ul>
+
+          <div class="info-box warning">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <div class="info-box-content">
+              <strong>Prerequisites</strong>
+              <ul>
+                <li><strong>Python 3.11+</strong> and <a href="https://docs.astral.sh/uv/" target="_blank" rel="noopener noreferrer"><code>uv</code></a> installed</li>
+                <li><strong>Git</strong> and a <strong>GitHub Copilot</strong>-enabled agent (e.g., VS Code or Copilot CLI)</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2>Install the specify CLI &amp; Initialize a Project</h2>
+          <p>Install the <code>specify</code> CLI with <code>uv</code>, then scaffold a project and choose your agent with <code>--integration</code>. Replace <code>vX.Y.Z</code> with the latest <a href="https://github.com/github/spec-kit/releases" target="_blank" rel="noopener noreferrer">release tag</a>:</p>
+          <pre><code># Install the CLI (requires uv)
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@vX.Y.Z
+
+# Scaffold a new project wired up for GitHub Copilot
+specify init my-project --integration copilot
+cd my-project</code></pre>
+          <p>Spec Kit adds its <code>/speckit.*</code> commands and a <code>.specify/</code> + <code>specs/</code> structure. In IDE agents the commands appear as slash commands; in <strong>GitHub Copilot CLI</strong> you select the agent with <code>/agents</code> (or address it directly in a prompt).</p>
+
+          <h2>Define the Project Constitution</h2>
+          <p>The <strong>constitution</strong> captures the non-negotiable principles your project must always follow — quality bars, architectural rules, testing expectations. The agent consults it during planning and implementation.</p>
+          <pre><code>/speckit.constitution Create principles for a small web API: all
+endpoints must have integration tests, prefer simple
+dependency-free solutions, validate every external input,
+and document each public function.</code></pre>
+          <p>Spec Kit writes these principles to a constitution file so every subsequent <code>/speckit.plan</code> and <code>/speckit.implement</code> stays aligned with them.</p>
+
+          <div class="info-box note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <div class="info-box-content">
+              <strong>Constitution vs. instructions</strong>
+              <p>A Spec Kit constitution plays a similar role to a <code>copilot-instructions.md</code> file — project-wide rules — but it is woven into Spec Kit's structured planning commands so the principles are enforced at each stage.</p>
+            </div>
+          </div>
+
+          <nav class="step-navigation" aria-label="Step navigation">
+            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+              </svg>
+              Previous
+            </button>
+            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
+              Next
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </nav>
+        </section>
+
+        <!-- Step 4: The Spec Kit Workflow -->
+        <section id="step-4" class="step-section" aria-labelledby="step-4-title">
+          <header class="step-header">
+            <span class="step-number">Step 4 of 5</span>
+            <h1 id="step-4-title" class="step-title">The Spec Kit Workflow</h1>
+            <p class="step-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              25 minutes
+            </p>
+          </header>
+
+          <p>With a constitution in place, Spec Kit drives the rest of the loop through its <code>/speckit.*</code> commands. Each one produces a reviewable artifact you can refine before moving on.</p>
+
+          <h2>/speckit.specify — Describe What and Why</h2>
+          <p>Start with the feature, focused on intent rather than the tech stack. Spec Kit generates a structured specification file.</p>
+          <pre><code>/speckit.specify Build a task board where users can create
+projects, add tasks to a project, drag tasks between "To Do",
+"Doing", and "Done" columns, and see each project's progress.
+Focus on the experience, not the implementation.</code></pre>
+
+          <h2>/speckit.plan — Choose the Technical Approach</h2>
+          <p>Now provide your stack and constraints. Spec Kit produces a technical plan that respects both your spec and your constitution.</p>
+          <pre><code>/speckit.plan Use a Vite + React frontend with TypeScript, a
+lightweight REST API in Node/Express, and in-memory storage
+for now. Keep components small and add integration tests for
+the API endpoints.</code></pre>
+
+          <h2>/speckit.tasks — Break the Plan into Steps</h2>
+          <p>Decompose the plan into an ordered, actionable task list. This is where the work becomes concrete and trackable.</p>
+          <pre><code>/speckit.tasks</code></pre>
+          <p>Review the generated tasks for correct ordering and dependencies. Reorder or split anything that's too large before implementing.</p>
+
+          <h2>/speckit.implement — Execute the Tasks</h2>
+          <p>Have the agent work through the task list, building the feature against the spec and constitution.</p>
+          <pre><code>/speckit.implement</code></pre>
+
+          <div class="info-box note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <div class="info-box-content">
+              <strong>Iterate at the right level</strong>
+              <p>If something is wrong, fix the <em>earliest</em> artifact that's wrong — update the spec, re-plan, regenerate tasks — rather than patching generated code by hand. Keeping the spec as the source of truth is what makes the workflow repeatable.</p>
+            </div>
+          </div>
+
+          <h2>Optional Quality Commands</h2>
+          <p>Spec Kit adds commands that act like "unit tests for your spec" — use them to catch gaps before you generate code:</p>
+          <ul>
+            <li><code>/speckit.clarify</code> — Surface and resolve underspecified areas (run <em>before</em> <code>/speckit.plan</code>).</li>
+            <li><code>/speckit.analyze</code> — Cross-artifact consistency &amp; coverage check (run after <code>/speckit.tasks</code>, before <code>/speckit.implement</code>).</li>
+            <li><code>/speckit.checklist</code> — Generate a custom quality checklist validating requirement completeness, clarity, and consistency.</li>
+          </ul>
+
+          <h2>The Full Loop at a Glance</h2>
+          <pre><code>/speckit.constitution  ->  project principles (once per project)
+/speckit.specify       ->  what & why  (per feature)
+/speckit.clarify       ->  resolve ambiguities (optional)
+/speckit.plan          ->  how (stack, architecture, constraints)
+/speckit.tasks         ->  ordered, actionable steps
+/speckit.analyze       ->  consistency & coverage check (optional)
+/speckit.implement     ->  code that satisfies the spec</code></pre>
+
+          <nav class="step-navigation" aria-label="Step navigation">
+            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+              </svg>
+              Previous
+            </button>
+            <button class="step-nav-button primary step-nav-next" aria-label="Next step">
+              Next
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </nav>
+        </section>
+
+        <!-- Step 5: Hands-on: Build a Feature Spec-First -->
+        <section id="step-5" class="step-section" aria-labelledby="step-5-title">
+          <header class="step-header">
+            <span class="step-number">Step 5 of 5</span>
+            <h1 id="step-5-title" class="step-title">Hands-on: Build a Feature Spec-First</h1>
+            <p class="step-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              30 minutes
+            </p>
+          </header>
+
+          <p>Put the full loop together. You'll take a small feature from idea to working code entirely spec-first, using Spec Kit.</p>
+
+          <h2>The Challenge</h2>
+          <p>Build a <strong>command-line "habit tracker"</strong> that lets a user add daily habits, mark them complete for today, and view a weekly streak summary. No UI framework required — keep it simple.</p>
+
+          <h2>Step-by-Step</h2>
+          <ol>
+            <li><strong>Initialize</strong> a fresh project with <code>specify init habit-tracker --integration copilot</code>.</li>
+            <li><strong>/speckit.constitution</strong> — Require unit tests for all logic, no external dependencies beyond the standard library, and clear help output.</li>
+            <li><strong>/speckit.specify</strong> — Describe the habit tracker's behavior and acceptance criteria (add, complete, weekly streak). Focus on what, not how.</li>
+            <li><strong>/speckit.plan</strong> — Choose a language (e.g., Python or Node), a storage approach (a local JSON file), and a simple command structure.</li>
+            <li><strong>/speckit.tasks</strong> — Generate the task list and review the ordering.</li>
+            <li><strong>/speckit.implement</strong> — Let the agent build it, then run the app and tests.</li>
+          </ol>
+
+          <h2>Acceptance Criteria to Verify</h2>
+          <ul>
+            <li>Adding a habit persists it across runs.</li>
+            <li>Marking a habit complete twice in one day is idempotent.</li>
+            <li>The weekly summary shows the correct current streak per habit.</li>
+            <li>All logic is covered by passing unit tests.</li>
+          </ul>
+
+          <div class="info-box note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <div class="info-box-content">
+              <strong>Reflection</strong>
+              <p>When a criterion fails, resist hand-editing the code. Update the spec or plan and regenerate. Notice how much faster iteration becomes when the spec — not the code — is your source of truth.</p>
+            </div>
+          </div>
+
+          <h3>What's Next?</h3>
+          <ul>
+            <li>Add a new requirement to the spec (e.g., reminders) and watch how a single <code>/speckit.plan</code> → <code>/speckit.tasks</code> → <code>/speckit.implement</code> pass extends the app.</li>
+            <li>Combine SDD with the <a href="agentic-workflows.html">Agentic Workflows</a> path to automate spec-driven changes in CI.</li>
+            <li>Bring Spec Kit into a real repository and trial it on your next feature.</li>
+          </ul>
+
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="https://github.com/github/spec-kit" target="_blank" rel="noopener noreferrer">GitHub Spec Kit repository</a></li>
+            <li><a href="https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/" target="_blank" rel="noopener noreferrer">Spec-driven development with AI (GitHub Blog)</a></li>
+            <li><a href="https://docs.github.com/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot Documentation</a></li>
+            <li><a href="https://docs.astral.sh/uv/" target="_blank" rel="noopener noreferrer">uv / uvx documentation</a></li>
+          </ul>
+
+          <nav class="step-navigation" aria-label="Step navigation">
+            <button class="step-nav-button step-nav-prev" aria-label="Previous step">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+              </svg>
+              Previous
+            </button>
+            <a href="agentic-workflows.html" class="step-nav-button primary">
+              Next: Agentic Workflows
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </nav>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile sidebar toggle button -->
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
