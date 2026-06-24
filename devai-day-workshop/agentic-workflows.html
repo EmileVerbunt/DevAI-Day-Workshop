@@ -147,6 +147,15 @@
 <li data-i18n-html="agentic-workflows.step1.glanceLi2"><strong>Markdown body</strong> — Your natural-language instructions describing the task.</li>
 </ul>
 <p data-i18n-html="agentic-workflows.step1.glanceP2">The <code>gh aw compile</code> command converts this markdown into a hardened <code>.lock.yml</code> GitHub Actions workflow that runs an AI agent in a containerized environment whenever the trigger fires.</p>
+<figure class="diagram-figure">
+<pre class="mermaid">
+flowchart LR
+    MD["📄 Workflow .md"] -->|"gh aw compile"| Lock["🔒 .lock.yml"]
+    Lock -->|"trigger fires"| Agent["🤖 AI agent in container"]
+    Agent --> Out["✅ Safe-outputs"]
+</pre>
+<figcaption data-i18n="agentic-workflows.step1.glanceCaption">From one markdown file to a running agent: compile, trigger, run, apply safe-outputs.</figcaption>
+</figure>
 <h2 data-i18n="agentic-workflows.step1.automateTitle">What You Can Automate</h2>
 <ul>
 <li data-i18n-html="agentic-workflows.step1.automateLi1"><strong>Issue triage</strong> — Read new issues, ask clarifying questions, apply labels.</li>
@@ -377,6 +386,17 @@ gh aw logs</code></pre>
                   agent runs in container, reads context
                                        |
                        safe-outputs validated &amp; applied</code></pre>
+<figure class="diagram-figure">
+<pre class="mermaid">
+flowchart TD
+    Write["✏️ Write .md"] --> Compile["⚙️ gh aw compile"]
+    Compile --> Locked["🔒 .lock.yml committed"]
+    Locked --> Trigger["⚡ Trigger fires"]
+    Trigger --> Run["🤖 Agent runs in container"]
+    Run --> Safe["✅ Safe-outputs validated &amp; applied"]
+</pre>
+<figcaption data-i18n="agentic-workflows.step4.lifecycleCaption">The workflow lifecycle: from editing the markdown to applied safe-outputs.</figcaption>
+</figure>
 <div class="info-box tip">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 <path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12c.5.5 1 1.2 1 2h6c0-.8.5-1.5 1-2a7 7 0 00-4-12z"></path>
@@ -541,7 +561,7 @@ Be concise and welcoming in any comment you write.</code></pre>
 <line x1="3" x2="21" y1="18" y2="18"></line>
 </svg>
 </button>
-<script src="i18n/bundles/agentic-workflows.js"></script><script src="js/i18n.js"></script><script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script><script>(function(){if(!window.mermaid)return;var isLight=document.documentElement.getAttribute('data-theme')==='light';window.mermaid.initialize({startOnLoad:true,theme:isLight?'default':'dark',securityLevel:'loose'});})();</script><script src="i18n/bundles/agentic-workflows.js"></script><script src="js/i18n.js"></script><script src="js/main.js"></script>
 </body>
 </html>
 

@@ -159,6 +159,16 @@
 <li data-i18n-html="spec-driven-development.step1.li11"><strong>Break down</strong> — Decompose the plan into concrete, ordered tasks.</li>
 <li data-i18n-html="spec-driven-development.step1.li12"><strong>Implement</strong> — Execute the tasks, verifying against acceptance criteria.</li>
 </ol>
+<figure class="diagram-figure">
+<pre class="mermaid">
+flowchart LR
+    Specify["📝 Specify (what &amp; why)"] --> Plan["🧭 Plan (approach)"]
+    Plan --> Breakdown["🧩 Break down (tasks)"]
+    Breakdown --> Implement["⚙️ Implement &amp; verify"]
+    Implement -->|"refine"| Specify
+</pre>
+<figcaption data-i18n="spec-driven-development.step1.sddLoopCaption">The SDD loop: specify, plan, break down, implement — then refine and repeat.</figcaption>
+</figure>
 <p data-i18n-html="spec-driven-development.step1.p6">Over the next steps you'll practice this loop first with plain Copilot, then with <strong>GitHub Spec Kit</strong> — a toolkit that formalizes each stage with slash commands.</p>
 <div class="info-box tip">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
@@ -423,6 +433,18 @@ the API endpoints.</code></pre>
 /speckit.tasks         -&gt;  ordered, actionable steps
 /speckit.analyze       -&gt;  consistency &amp; coverage check (optional)
 /speckit.implement     -&gt;  code that satisfies the spec</code></pre>
+<figure class="diagram-figure">
+<pre class="mermaid">
+flowchart TD
+    C["/speckit.constitution"] --> S["/speckit.specify"]
+    S --> CL["/speckit.clarify (optional)"]
+    CL --> P["/speckit.plan"]
+    P --> T["/speckit.tasks"]
+    T --> A["/speckit.analyze (optional)"]
+    A --> I["/speckit.implement"]
+</pre>
+<figcaption data-i18n="spec-driven-development.step4.fullLoopCaption">Each Spec Kit command builds on the previous one, from project principles to working code.</figcaption>
+</figure>
 <nav aria-label="Step navigation" class="step-navigation" data-i18n-attr="aria-label:spec-driven-development.stepNav.aria">
 <button aria-label="Previous step" class="step-nav-button step-nav-prev" data-i18n-attr="aria-label:common.stepNav.previousAria">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
@@ -514,6 +536,6 @@ the API endpoints.</code></pre>
 <line x1="3" x2="21" y1="18" y2="18"></line>
 </svg>
 </button>
-<script src="i18n/bundles/spec-driven-development.js"></script><script src="js/i18n.js"></script><script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script><script>(function(){if(!window.mermaid)return;var isLight=document.documentElement.getAttribute('data-theme')==='light';window.mermaid.initialize({startOnLoad:true,theme:isLight?'default':'dark',securityLevel:'loose'});})();</script><script src="i18n/bundles/spec-driven-development.js"></script><script src="js/i18n.js"></script><script src="js/main.js"></script>
 </body>
 </html>
