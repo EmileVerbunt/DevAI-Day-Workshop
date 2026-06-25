@@ -480,11 +480,16 @@ applyTo:
 <li data-i18n-html="extended-capabilities.step3.li9"><strong><code>create-skill</code></strong> — Scaffolds a brand-new skill for you: it generates the <code>SKILL.md</code> file with sensible front matter (<code>name</code>, <code>description</code>, <code>applyTo</code>) and a structured body, ready for you to refine.</li>
 </ul>
 <p data-i18n="extended-capabilities.step3.p11">A typical flow is "look before you build" — first search for an existing skill, and only scaffold a new one if nothing fits:</p>
-<pre><code># Discover skills relevant to what you're trying to do
-./skills.sh find-skills "review pull requests for security issues"
+<pre><code># 1. Download the meta-skills from https://skills.sh into your skills folder
+mkdir -p .github/copilot/skills
+curl -o .github/copilot/skills/find-skills.SKILL.md https://skills.sh/skills/find-skills.SKILL.md
+curl -o .github/copilot/skills/create-skill.SKILL.md https://skills.sh/skills/create-skill.SKILL.md
 
-# No good match? Scaffold a new skill and let it generate the boilerplate
-./skills.sh create-skill "security-pr-review"</code></pre>
+# 2. Copilot will now pick up the skills — ask it to discover relevant ones
+# "Use the find-skills skill to find skills for reviewing pull requests for security issues"
+
+# 3. No good match? Ask Copilot to scaffold a new skill
+# "Use the create-skill skill to create a security-pr-review skill"</code></pre>
 <div class="info-box tip">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 <circle cx="12" cy="12" r="10"></circle>
