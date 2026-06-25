@@ -19,7 +19,7 @@
   "prerequisites.access.listAria": "Accounts en toegang",
   "prerequisites.access.copilotEnabled.html": "<strong>Copilot ingeschakeld</strong> voor je account door je organisatie (als je een Business/Enterprise plan gebruikt).",
   "prerequisites.access.repositories.html": "<strong>Mogelijkheid om repositories aan te maken</strong> en publieke repositories te <strong>forken</strong> onder je account.",
-  "prerequisites.access.codingAgent.html": "<strong>Copilot coding agent</strong> beschikbaar (nodig voor Path 2). Beschikbaarheid hangt af van je Copilot plan/admin settings.",
+  "prerequisites.access.codingAgent.html": "<strong>Copilot coding agent</strong> beschikbaar. Beschikbaarheid hangt af van je Copilot plan/admin settings.",
   "prerequisites.access.actions.html": "<strong>GitHub Actions ingeschakeld</strong> op een repo die jij beheert, met rechten om workflows toe te voegen (nodig voor Path 5).",
   "prerequisites.perPath.title": "Vereisten per path",
   "prerequisites.perPath.subtitle": "Extra's die je alleen installeert voor de paths die je volgt (naast de algemene lijst)",

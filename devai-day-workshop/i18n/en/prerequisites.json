@@ -19,7 +19,7 @@
   "prerequisites.access.listAria": "Accounts and access",
   "prerequisites.access.copilotEnabled.html": "<strong>Copilot enabled</strong> for your account by your organization (if you use a Business/Enterprise plan).",
   "prerequisites.access.repositories.html": "<strong>Ability to create repositories</strong> and <strong>fork</strong> public repositories under your account.",
-  "prerequisites.access.codingAgent.html": "<strong>Copilot coding agent</strong> available (needed for Path 2). Availability depends on your Copilot plan/admin settings.",
+  "prerequisites.access.codingAgent.html": "<strong>Copilot coding agent</strong> available. Availability depends on your Copilot plan/admin settings.",
   "prerequisites.access.actions.html": "<strong>GitHub Actions enabled</strong> on a repo you control, with permission to add workflows (needed for Path 5).",
   "prerequisites.perPath.title": "Per-Path Requirements",
   "prerequisites.perPath.subtitle": "Extras to install only for the paths you'll follow (in addition to the core list)",

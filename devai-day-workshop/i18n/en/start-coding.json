@@ -188,7 +188,7 @@
   "start-coding.step10.nextTitle": "Next Steps",
   "start-coding.step10.nextLi1": "Try using Copilot in your own projects",
   "start-coding.step10.nextLi2": "Challenge more complex application development",
-  "start-coding.step10.nextLi3": "Explore the <a href=\"pro-features.html\">Copilot Pro Features</a> learning path",
+  "start-coding.step10.nextLi3": "Explore the <a href=\"extended-capabilities.html\">Extended Capabilities</a> learning path",
   "start-coding.step1.forkAlt": "Click Fork button in the GitHub repository header",
   "start-coding.step3.chatAlt": "Copilot Chat interface in VS Code showing the Ask mode",
   "start-coding.step3.explainAlt": "Copilot explaining code in the chat panel",
@@ -205,5 +205,5 @@
   "start-coding.step9.docAlt": "Generated documentation",
   "start-coding.step9.mermaidAlt": "Mermaid diagrams in documentation",
   "start-coding.stepNav.aria": "Step navigation",
-  "start-coding.step10.continue": "Continue to Pro Features"
+  "start-coding.step10.continue": "Continue to Extended Capabilities"
 }
