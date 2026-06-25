@@ -270,13 +270,10 @@ eval "$(gh copilot alias -- bash)"</code></pre>
 <ol>
 <li data-i18n-html="extended-capabilities.step2.li8">In the CLI, run <code>/mcp add</code> and follow the prompts (or edit your MCP config file directly — see below).</li>
 <li><span data-i18n="extended-capabilities.step2.li9">Configure it as an HTTP server pointing at the hosted GitHub MCP endpoint, or run it locally. A typical JSON config entry looks like this:</span><pre><code>{
-  "mcpServers": {
+  "servers": {
     "github": {
       "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "Authorization": "Bearer ${GITHUB_PAT}"
-      }
+      "url": "https://copilot-api.waternet.ghe.com/mcp"
     }
   }
 }</code></pre>
